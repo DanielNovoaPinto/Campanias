@@ -1,0 +1,2 @@
+En este proyecto se encontrara codigo que nos facilitara algunos procesos como es la carga de diferentes 
+objetos (DropDownList).

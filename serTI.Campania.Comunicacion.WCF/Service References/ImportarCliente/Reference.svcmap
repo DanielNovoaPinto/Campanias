@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="89aba908-d4bb-4d44-ad51-00be59ee8a82" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:6060/Reporte/ImportarCliente.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ImportarCliente.xsd" MetadataType="Schema" ID="77a56b83-baf1-4fea-8fa6-1cc89744d68a" SourceId="1" SourceUrl="http://localhost:6060/Reporte/ImportarCliente.svc?xsd=xsd5" />
+    <MetadataFile FileName="ImportarCliente1.xsd" MetadataType="Schema" ID="e51d96f6-c1d6-4acf-8efc-15109954436b" SourceId="1" SourceUrl="http://localhost:6060/Reporte/ImportarCliente.svc?xsd=xsd1" />
+    <MetadataFile FileName="ImportarCliente2.xsd" MetadataType="Schema" ID="c5afe58c-4a9e-41c5-95f0-561745397eca" SourceId="1" SourceUrl="http://localhost:6060/Reporte/ImportarCliente.svc?xsd=xsd0" />
+    <MetadataFile FileName="ImportarCliente.disco" MetadataType="Disco" ID="978e8e13-0bc3-47f4-bf21-40090b4cacfe" SourceId="1" SourceUrl="http://localhost:6060/Reporte/ImportarCliente.svc?disco" />
+    <MetadataFile FileName="ImportarCliente3.xsd" MetadataType="Schema" ID="7e9d14a2-c7a5-49ba-bca2-f60da141a6a0" SourceId="1" SourceUrl="http://localhost:6060/Reporte/ImportarCliente.svc?xsd=xsd2" />
+    <MetadataFile FileName="ImportarCliente4.xsd" MetadataType="Schema" ID="2b1f9250-0549-48c6-a0c6-bd8adeb88768" SourceId="1" SourceUrl="http://localhost:6060/Reporte/ImportarCliente.svc?xsd=xsd3" />
+    <MetadataFile FileName="ImportarCliente.wsdl" MetadataType="Wsdl" ID="4b5838a7-4722-4e2c-9bcb-320d7aca123e" SourceId="1" SourceUrl="http://localhost:6060/Reporte/ImportarCliente.svc?wsdl" />
+    <MetadataFile FileName="ImportarCliente5.xsd" MetadataType="Schema" ID="bb7f1387-bc8f-4c4e-b730-b55171870ece" SourceId="1" SourceUrl="http://localhost:6060/Reporte/ImportarCliente.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f82b938c-4a32-4db7-bea9-c54d9baa2f7f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:6060/Reporte/FuenteInformacion.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FuenteInformacion.disco" MetadataType="Disco" ID="3fca74d6-4221-473f-ad23-654a62c1ebc0" SourceId="1" SourceUrl="http://localhost:6060/Reporte/FuenteInformacion.svc?disco" />
+    <MetadataFile FileName="FuenteInformacion.xsd" MetadataType="Schema" ID="9aa2743f-1cee-46d8-9dbd-c8cb9889b001" SourceId="1" SourceUrl="http://localhost:6060/Reporte/FuenteInformacion.svc?xsd=xsd3" />
+    <MetadataFile FileName="FuenteInformacion.wsdl" MetadataType="Wsdl" ID="ab0fa0bc-12a1-4be6-a4ab-bcc1e4099402" SourceId="1" SourceUrl="http://localhost:6060/Reporte/FuenteInformacion.svc?wsdl" />
+    <MetadataFile FileName="FuenteInformacion1.xsd" MetadataType="Schema" ID="de466687-199c-47ea-a6e4-b6e180974078" SourceId="1" SourceUrl="http://localhost:6060/Reporte/FuenteInformacion.svc?xsd=xsd4" />
+    <MetadataFile FileName="FuenteInformacion2.xsd" MetadataType="Schema" ID="3f6d7980-2b4e-4d0f-9d29-d33cf1317608" SourceId="1" SourceUrl="http://localhost:6060/Reporte/FuenteInformacion.svc?xsd=xsd2" />
+    <MetadataFile FileName="FuenteInformacion3.xsd" MetadataType="Schema" ID="e35aebc1-4ae1-4f78-ace6-85df8f7dfe1d" SourceId="1" SourceUrl="http://localhost:6060/Reporte/FuenteInformacion.svc?xsd=xsd0" />
+    <MetadataFile FileName="FuenteInformacion4.xsd" MetadataType="Schema" ID="3cfafb55-9e80-4c2b-a4da-91be43d563b6" SourceId="1" SourceUrl="http://localhost:6060/Reporte/FuenteInformacion.svc?xsd=xsd1" />
+    <MetadataFile FileName="FuenteInformacion5.xsd" MetadataType="Schema" ID="bb42e4f5-19c4-4b1f-9c3c-dd0efc2cb662" SourceId="1" SourceUrl="http://localhost:6060/Reporte/FuenteInformacion.svc?xsd=xsd5" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

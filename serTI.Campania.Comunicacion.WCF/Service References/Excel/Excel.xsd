@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/serTI.Campania.Modelo.BaseDatos" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/serTI.Campania.Modelo.BaseDatos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:33450/Reporte/Excel.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+  <xs:complexType name="Excel">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q1:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Clave" type="xs:int" />
+          <xs:element minOccurs="0" name="ClaveUsuarioActualizacion" type="xs:int" />
+          <xs:element minOccurs="0" name="Estatus" type="xs:boolean" />
+          <xs:element minOccurs="0" name="FechaActualizacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaCreacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaHora" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ImportarCliente" nillable="true" type="tns:ArrayOfImportarCliente" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Ruta" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Usuario" nillable="true" type="tns:Usuario" />
+          <xs:element minOccurs="0" name="UsuarioActualizacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioCreacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioReference" nillable="true" type="q1:EntityReferenceOfUsuariovdVgx_P26" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Excel" nillable="true" type="tns:Excel" />
+  <xs:complexType name="ArrayOfImportarCliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ImportarCliente" nillable="true" type="tns:ImportarCliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfImportarCliente" nillable="true" type="tns:ArrayOfImportarCliente" />
+  <xs:complexType name="ImportarCliente">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q2:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Clave" type="xs:long" />
+          <xs:element minOccurs="0" name="ClaveExcel" type="xs:int" />
+          <xs:element minOccurs="0" name="Contacto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Direccion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Estatus" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Excel" nillable="true" type="tns:Excel" />
+          <xs:element minOccurs="0" name="ExcelReference" nillable="true" type="q2:EntityReferenceOfExcelvdVgx_P26" />
+          <xs:element minOccurs="0" name="FechaActualizacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaCreacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaHora" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FuenteInformacion" nillable="true" type="tns:ArrayOfFuenteInformacion" />
+          <xs:element minOccurs="0" name="ImportarClienteContacto" nillable="true" type="tns:ArrayOfImportarClienteContacto" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Telefono" type="xs:int" />
+          <xs:element minOccurs="0" name="UsuarioActualizacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioCreacion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ImportarCliente" nillable="true" type="tns:ImportarCliente" />
+  <xs:complexType name="ArrayOfFuenteInformacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FuenteInformacion" nillable="true" type="tns:FuenteInformacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFuenteInformacion" nillable="true" type="tns:ArrayOfFuenteInformacion" />
+  <xs:complexType name="FuenteInformacion">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q3:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Archivo" nillable="true" type="tns:ArrayOfArchivo" />
+          <xs:element minOccurs="0" name="Campania" nillable="true" type="tns:Campania" />
+          <xs:element minOccurs="0" name="CampaniaReference" nillable="true" type="q3:EntityReferenceOfCampaniavdVgx_P26" />
+          <xs:element minOccurs="0" name="Cita" nillable="true" type="tns:ArrayOfCita" />
+          <xs:element minOccurs="0" name="Clave" type="xs:long" />
+          <xs:element minOccurs="0" name="ClaveCampania" type="xs:int" />
+          <xs:element minOccurs="0" name="ClaveImportarCliente" type="xs:long" />
+          <xs:element minOccurs="0" name="Estatus" type="xs:boolean" />
+          <xs:element minOccurs="0" name="FechaActualizacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaCreacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ImportarCliente" nillable="true" type="tns:ImportarCliente" />
+          <xs:element minOccurs="0" name="ImportarClienteReference" nillable="true" type="q3:EntityReferenceOfImportarClientevdVgx_P26" />
+          <xs:element minOccurs="0" name="Nota" nillable="true" type="tns:ArrayOfNota" />
+          <xs:element minOccurs="0" name="UsuarioActualizacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioCreacion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FuenteInformacion" nillable="true" type="tns:FuenteInformacion" />
+  <xs:complexType name="ArrayOfArchivo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Archivo" nillable="true" type="tns:Archivo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfArchivo" nillable="true" type="tns:ArrayOfArchivo" />
+  <xs:complexType name="Archivo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q4:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Archivo1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Clave" type="xs:long" />
+          <xs:element minOccurs="0" name="ClaveFuenteInformacion" type="xs:long" />
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Estatus" type="xs:boolean" />
+          <xs:element minOccurs="0" name="FechaActualizacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaCreacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FuenteInformacion" nillable="true" type="tns:FuenteInformacion" />
+          <xs:element minOccurs="0" name="FuenteInformacionReference" nillable="true" type="q4:EntityReferenceOfFuenteInformacionvdVgx_P26" />
+          <xs:element minOccurs="0" name="UsuarioActualizacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioCreacion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Archivo" nillable="true" type="tns:Archivo" />
+  <xs:complexType name="Campania">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q5:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Clave" type="xs:int" />
+          <xs:element minOccurs="0" name="ClaveEmpresa" type="xs:long" />
+          <xs:element minOccurs="0" name="ClaveTipoCampania" type="xs:int" />
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Empresa" nillable="true" type="tns:Empresa" />
+          <xs:element minOccurs="0" name="EmpresaReference" nillable="true" type="q5:EntityReferenceOfEmpresavdVgx_P26" />
+          <xs:element minOccurs="0" name="Estatus" type="xs:boolean" />
+          <xs:element minOccurs="0" name="FechaActualizacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaCreacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaFin" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaInicio" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FuenteInformacion" nillable="true" type="tns:ArrayOfFuenteInformacion" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TipoCampania" nillable="true" type="tns:TipoCampania" />
+          <xs:element minOccurs="0" name="TipoCampaniaReference" nillable="true" type="q5:EntityReferenceOfTipoCampaniavdVgx_P26" />
+          <xs:element minOccurs="0" name="UsuarioActualizacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioCampania" nillable="true" type="tns:ArrayOfUsuarioCampania" />
+          <xs:element minOccurs="0" name="UsuarioCreacion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Campania" nillable="true" type="tns:Campania" />
+  <xs:complexType name="Empresa">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q6:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Campania" nillable="true" type="tns:ArrayOfCampania" />
+          <xs:element minOccurs="0" name="Clave" type="xs:long" />
+          <xs:element minOccurs="0" name="Contacto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Direccion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmpresaContacto" nillable="true" type="tns:ArrayOfEmpresaContacto" />
+          <xs:element minOccurs="0" name="Estatus" type="xs:boolean" />
+          <xs:element minOccurs="0" name="FechaActualizacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaCreacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaHora" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Telefono" type="xs:int" />
+          <xs:element minOccurs="0" name="UsuarioActualizacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioCreacion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Empresa" nillable="true" type="tns:Empresa" />
+  <xs:complexType name="ArrayOfCampania">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Campania" nillable="true" type="tns:Campania" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCampania" nillable="true" type="tns:ArrayOfCampania" />
+  <xs:complexType name="ArrayOfEmpresaContacto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EmpresaContacto" nillable="true" type="tns:EmpresaContacto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmpresaContacto" nillable="true" type="tns:ArrayOfEmpresaContacto" />
+  <xs:complexType name="EmpresaContacto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q7:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Clave" type="xs:long" />
+          <xs:element minOccurs="0" name="ClaveContacto" type="xs:int" />
+          <xs:element minOccurs="0" name="ClaveEmpresa" type="xs:long" />
+          <xs:element minOccurs="0" name="Contacto" nillable="true" type="tns:Contacto" />
+          <xs:element minOccurs="0" name="ContactoReference" nillable="true" type="q7:EntityReferenceOfContactovdVgx_P26" />
+          <xs:element minOccurs="0" name="Empresa" nillable="true" type="tns:Empresa" />
+          <xs:element minOccurs="0" name="EmpresaReference" nillable="true" type="q7:EntityReferenceOfEmpresavdVgx_P26" />
+          <xs:element minOccurs="0" name="Estatus" type="xs:boolean" />
+          <xs:element minOccurs="0" name="FechaActualizacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaCreacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UsuarioActualizacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioCreacion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EmpresaContacto" nillable="true" type="tns:EmpresaContacto" />
+  <xs:complexType name="Contacto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q8:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApellidoMaterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ApellidoPaterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Clave" type="xs:int" />
+          <xs:element minOccurs="0" name="EmpresaContacto" nillable="true" type="tns:ArrayOfEmpresaContacto" />
+          <xs:element minOccurs="0" name="Estatus" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Extension" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Fax" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaActualizacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaCreacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ImportarClienteContacto" nillable="true" type="tns:ArrayOfImportarClienteContacto" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TelefonoCelular" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioActualizacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioCreacion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Contacto" nillable="true" type="tns:Contacto" />
+  <xs:complexType name="ArrayOfImportarClienteContacto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ImportarClienteContacto" nillable="true" type="tns:ImportarClienteContacto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfImportarClienteContacto" nillable="true" type="tns:ArrayOfImportarClienteContacto" />
+  <xs:complexType name="ImportarClienteContacto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q9:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Clave" type="xs:long" />
+          <xs:element minOccurs="0" name="ClaveContacto" type="xs:int" />
+          <xs:element minOccurs="0" name="ClaveImportarCliente" type="xs:long" />
+          <xs:element minOccurs="0" name="Contacto" nillable="true" type="tns:Contacto" />
+          <xs:element minOccurs="0" name="ContactoReference" nillable="true" type="q9:EntityReferenceOfContactovdVgx_P26" />
+          <xs:element minOccurs="0" name="Estatus" type="xs:boolean" />
+          <xs:element minOccurs="0" name="FechaActualizacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaCreacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ImportarCliente" nillable="true" type="tns:ImportarCliente" />
+          <xs:element minOccurs="0" name="ImportarClienteReference" nillable="true" type="q9:EntityReferenceOfImportarClientevdVgx_P26" />
+          <xs:element minOccurs="0" name="UsuarioActualizacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioCreacion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ImportarClienteContacto" nillable="true" type="tns:ImportarClienteContacto" />
+  <xs:complexType name="TipoCampania">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q10:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Campania" nillable="true" type="tns:ArrayOfCampania" />
+          <xs:element minOccurs="0" name="Clave" type="xs:int" />
+          <xs:element minOccurs="0" name="Estatus" type="xs:boolean" />
+          <xs:element minOccurs="0" name="FechaActualizacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaCreacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TipoCampania1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioActualizacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioCreacion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TipoCampania" nillable="true" type="tns:TipoCampania" />
+  <xs:complexType name="ArrayOfUsuarioCampania">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UsuarioCampania" nillable="true" type="tns:UsuarioCampania" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUsuarioCampania" nillable="true" type="tns:ArrayOfUsuarioCampania" />
+  <xs:complexType name="UsuarioCampania">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q11:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Campania" nillable="true" type="tns:Campania" />
+          <xs:element minOccurs="0" name="CampaniaReference" nillable="true" type="q11:EntityReferenceOfCampaniavdVgx_P26" />
+          <xs:element minOccurs="0" name="Clave" type="xs:int" />
+          <xs:element minOccurs="0" name="ClaveCampania" type="xs:int" />
+          <xs:element minOccurs="0" name="ClaveUsuario" type="xs:int" />
+          <xs:element minOccurs="0" name="Estatus" type="xs:boolean" />
+          <xs:element minOccurs="0" name="FechaActualizacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaCreacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Usuario" nillable="true" type="tns:Usuario" />
+          <xs:element minOccurs="0" name="UsuarioActualizacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioCreacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioReference" nillable="true" type="q11:EntityReferenceOfUsuariovdVgx_P26" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UsuarioCampania" nillable="true" type="tns:UsuarioCampania" />
+  <xs:complexType name="Usuario">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q12:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApellidoMaterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ApellidoPaterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Clave" type="xs:int" />
+          <xs:element minOccurs="0" name="ClavePerfil" type="xs:int" />
+          <xs:element minOccurs="0" name="Contrasenia" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Estatus" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Excel" nillable="true" type="tns:ArrayOfExcel" />
+          <xs:element minOccurs="0" name="FechaActualizacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaCreacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Perfil" nillable="true" type="tns:Perfil" />
+          <xs:element minOccurs="0" name="PerfilReference" nillable="true" type="q12:EntityReferenceOfPerfilvdVgx_P26" />
+          <xs:element minOccurs="0" name="Usuario1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioActualizacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioCampania" nillable="true" type="tns:ArrayOfUsuarioCampania" />
+          <xs:element minOccurs="0" name="UsuarioCreacion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Usuario" nillable="true" type="tns:Usuario" />
+  <xs:complexType name="ArrayOfExcel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Excel" nillable="true" type="tns:Excel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExcel" nillable="true" type="tns:ArrayOfExcel" />
+  <xs:complexType name="Perfil">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q13:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Clave" type="xs:int" />
+          <xs:element minOccurs="0" name="Estatus" type="xs:boolean" />
+          <xs:element minOccurs="0" name="FechaActualizacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaCreacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PerfilPantalla" nillable="true" type="tns:ArrayOfPerfilPantalla" />
+          <xs:element minOccurs="0" name="Usuario" nillable="true" type="tns:ArrayOfUsuario" />
+          <xs:element minOccurs="0" name="UsuarioActualizacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioCreacion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Perfil" nillable="true" type="tns:Perfil" />
+  <xs:complexType name="ArrayOfPerfilPantalla">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PerfilPantalla" nillable="true" type="tns:PerfilPantalla" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPerfilPantalla" nillable="true" type="tns:ArrayOfPerfilPantalla" />
+  <xs:complexType name="PerfilPantalla">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q14:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Clave" type="xs:long" />
+          <xs:element minOccurs="0" name="ClavePantalla" type="xs:int" />
+          <xs:element minOccurs="0" name="ClavePerfil" type="xs:int" />
+          <xs:element minOccurs="0" name="Estatus" type="xs:boolean" />
+          <xs:element minOccurs="0" name="FechaActualizacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaCreacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Pantalla" nillable="true" type="tns:Pantalla" />
+          <xs:element minOccurs="0" name="PantallaReference" nillable="true" type="q14:EntityReferenceOfPantallavdVgx_P26" />
+          <xs:element minOccurs="0" name="Perfil" nillable="true" type="tns:Perfil" />
+          <xs:element minOccurs="0" name="PerfilReference" nillable="true" type="q14:EntityReferenceOfPerfilvdVgx_P26" />
+          <xs:element minOccurs="0" name="UsuarioActualizacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioCreacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Visible" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PerfilPantalla" nillable="true" type="tns:PerfilPantalla" />
+  <xs:complexType name="Pantalla">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q15:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Clave" type="xs:int" />
+          <xs:element minOccurs="0" name="Estatus" type="xs:boolean" />
+          <xs:element minOccurs="0" name="FechaActualizacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaCreacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PerfilPantalla" nillable="true" type="tns:ArrayOfPerfilPantalla" />
+          <xs:element minOccurs="0" name="URL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioActualizacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioCreacion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Pantalla" nillable="true" type="tns:Pantalla" />
+  <xs:complexType name="ArrayOfUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Usuario" nillable="true" type="tns:Usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUsuario" nillable="true" type="tns:ArrayOfUsuario" />
+  <xs:complexType name="ArrayOfCita">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Cita" nillable="true" type="tns:Cita" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCita" nillable="true" type="tns:ArrayOfCita" />
+  <xs:complexType name="Cita">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q16:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Clave" type="xs:long" />
+          <xs:element minOccurs="0" name="ClaveFuenteInformacion" type="xs:long" />
+          <xs:element minOccurs="0" name="Estatus" type="xs:boolean" />
+          <xs:element minOccurs="0" name="FechaActualizacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaCreacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaHora" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FuenteInformacion" nillable="true" type="tns:FuenteInformacion" />
+          <xs:element minOccurs="0" name="FuenteInformacionReference" nillable="true" type="q16:EntityReferenceOfFuenteInformacionvdVgx_P26" />
+          <xs:element minOccurs="0" name="Lugar" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioActualizacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioCreacion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Cita" nillable="true" type="tns:Cita" />
+  <xs:complexType name="ArrayOfNota">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Nota" nillable="true" type="tns:Nota" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNota" nillable="true" type="tns:ArrayOfNota" />
+  <xs:complexType name="Nota">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q17:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Clave" type="xs:long" />
+          <xs:element minOccurs="0" name="ClaveFuenteInformacion" type="xs:long" />
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Estatus" type="xs:boolean" />
+          <xs:element minOccurs="0" name="FechaActualizacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaCreacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FuenteInformacion" nillable="true" type="tns:FuenteInformacion" />
+          <xs:element minOccurs="0" name="FuenteInformacionReference" nillable="true" type="q17:EntityReferenceOfFuenteInformacionvdVgx_P26" />
+          <xs:element minOccurs="0" name="UsuarioActualizacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioCreacion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Nota" nillable="true" type="tns:Nota" />
+</xs:schema>

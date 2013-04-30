@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="serTI.Campania.Servicio.Reporte.EmpresaContacto" CodeBehind="EmpresaContacto.svc.cs" %>

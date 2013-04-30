@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/serTI.Campania.Modelo.BaseDatos" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/serTI.Campania.Modelo.BaseDatos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:6060/Reporte/FuenteInformacion.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+  <xs:complexType name="FuenteInformacion">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q1:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Clave" type="xs:long" />
+          <xs:element minOccurs="0" name="ClaveCampania" type="xs:int" />
+          <xs:element minOccurs="0" name="ClaveImportarCliente" type="xs:long" />
+          <xs:element minOccurs="0" name="Estatus" type="xs:boolean" />
+          <xs:element minOccurs="0" name="FechaActualizacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaCreacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UsuarioActualizacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioCreacion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FuenteInformacion" nillable="true" type="tns:FuenteInformacion" />
+  <xs:complexType name="ArrayOfFuenteInformacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FuenteInformacion" nillable="true" type="tns:FuenteInformacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFuenteInformacion" nillable="true" type="tns:ArrayOfFuenteInformacion" />
+</xs:schema>

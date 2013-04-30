@@ -1,0 +1,95 @@
+/* Artfully masterminded by ZURB  */
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+
+
+
+/* -----------------------------------------
+   Home
+----------------------------------------- */
+header.home{
+	background-image: url(../imgs/fondo_1.png);
+	height: 728px;
+}
+#homepage{
+	background: none repeat scroll 0 0 #9d3938;
+	margin-top: -545px;
+	height: 334px;
+}
+.logo_mk10{
+	margin-left: -60px;
+	margin-top: 14px;
+}
+.log_spot{
+	width: 200px;
+	height: 308px;
+	margin-top: 70px;
+	margin-left: 130px;
+}
+form.log_spot ul li{
+	list-style: none;
+}
+.home_divider_izq{
+	background-image: url(../imgs/divider_home.png);
+	margin-top: 50px;
+	width: 1px;
+	height: 156px;
+	margin-left: 160px;
+}
+.home_divider_der{
+	background-image: url(../imgs/divider_home.png);
+	margin-top: 50px;
+	width: 1px;
+	height: 156px;
+	margin-left: 60px;
+}
+.btn_login{
+	background-image: url(../imgs/btn_login.png);
+	width: 85px;
+	height: 29px;
+	text-indent: -9999em;
+	display: block;
+}
+.btn_login:hover{
+	background-image: url(../imgs/btn_login_hover.png);
+	width: 85px;
+	height: 29px;
+	text-indent: -9999em;
+	display: block;
+}
+/* -----------------------------------------
+   Page Name 2
+----------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

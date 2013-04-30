@@ -1,0 +1,5 @@
+
+Esta capa se encarga de la seguridad del sistema, Implementa procesos de negocio, identificados durante el análisis funcional,
+ Control de acceso a los servicios de negocio desde otras capas, Publicación de los servicios de negocio, Invocación de la capa de
+persistencia.
+Esta capa se conecta con con la capa de modelo y la de servicios.

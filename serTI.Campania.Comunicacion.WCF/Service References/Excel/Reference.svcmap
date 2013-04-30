@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0d8e5c2d-51e5-47ce-8346-afeece970615" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:33450/Reporte/Excel.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Excel.xsd" MetadataType="Schema" ID="992b65fb-e987-4f74-bac5-0e96bcc0cba9" SourceId="1" SourceUrl="http://localhost:33450/Reporte/Excel.svc?xsd=xsd3" />
+    <MetadataFile FileName="Excel1.xsd" MetadataType="Schema" ID="301c907a-d904-4005-8e54-539cfad58eb6" SourceId="1" SourceUrl="http://localhost:33450/Reporte/Excel.svc?xsd=xsd2" />
+    <MetadataFile FileName="Excel2.xsd" MetadataType="Schema" ID="e5d6784e-d4e8-4acd-9aee-4687202c8d62" SourceId="1" SourceUrl="http://localhost:33450/Reporte/Excel.svc?xsd=xsd6" />
+    <MetadataFile FileName="Excel.wsdl" MetadataType="Wsdl" ID="bcfb5cbc-18a6-4b85-9564-78a143d8f30a" SourceId="1" SourceUrl="http://localhost:33450/Reporte/Excel.svc?wsdl" />
+    <MetadataFile FileName="Excel3.xsd" MetadataType="Schema" ID="1529c25f-383d-4da5-90ca-b85ee076e727" SourceId="1" SourceUrl="http://localhost:33450/Reporte/Excel.svc?xsd=xsd5" />
+    <MetadataFile FileName="Excel4.xsd" MetadataType="Schema" ID="48dfc3b3-8571-4fde-82d9-9980437c5b68" SourceId="1" SourceUrl="http://localhost:33450/Reporte/Excel.svc?xsd=xsd4" />
+    <MetadataFile FileName="Excel.disco" MetadataType="Disco" ID="d4e1dc9a-6fc9-47e8-ac9a-f65836e5e33f" SourceId="1" SourceUrl="http://localhost:33450/Reporte/Excel.svc?disco" />
+    <MetadataFile FileName="Excel5.xsd" MetadataType="Schema" ID="6968acb2-56ca-48e0-9742-7d6936c07210" SourceId="1" SourceUrl="http://localhost:33450/Reporte/Excel.svc?xsd=xsd1" />
+    <MetadataFile FileName="Excel6.xsd" MetadataType="Schema" ID="e26d93b0-47c2-45c2-844a-d2e18c7d2dfd" SourceId="1" SourceUrl="http://localhost:33450/Reporte/Excel.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

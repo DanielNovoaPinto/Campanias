@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:33450/Reporte/Excel.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+  <xs:import schemaLocation="http://localhost:33450/Reporte/Excel.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="EntityObject">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:StructuralObject">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data" minOccurs="0" name="EntityKey" nillable="true" type="q1:EntityKey" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityObject" nillable="true" type="tns:EntityObject" />
+  <xs:complexType name="StructuralObject">
+    <xs:sequence />
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="StructuralObject" nillable="true" type="tns:StructuralObject" />
+  <xs:complexType name="EntityReferenceOfExcelvdVgx_P26">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Excel" Namespace="http://schemas.datacontract.org/2004/07/serTI.Campania.Modelo.BaseDatos" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfExcelvdVgx_P26" nillable="true" type="tns:EntityReferenceOfExcelvdVgx_P26" />
+  <xs:complexType name="EntityReference">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RelatedEnd">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System.Data" minOccurs="0" name="EntityKey" nillable="true" type="q2:EntityKey" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReference" nillable="true" type="tns:EntityReference" />
+  <xs:complexType name="RelatedEnd">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="RelatedEnd" nillable="true" type="tns:RelatedEnd" />
+  <xs:complexType name="EntityReferenceOfFuenteInformacionvdVgx_P26">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="FuenteInformacion" Namespace="http://schemas.datacontract.org/2004/07/serTI.Campania.Modelo.BaseDatos" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfFuenteInformacionvdVgx_P26" nillable="true" type="tns:EntityReferenceOfFuenteInformacionvdVgx_P26" />
+  <xs:complexType name="EntityReferenceOfContactovdVgx_P26">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Contacto" Namespace="http://schemas.datacontract.org/2004/07/serTI.Campania.Modelo.BaseDatos" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfContactovdVgx_P26" nillable="true" type="tns:EntityReferenceOfContactovdVgx_P26" />
+  <xs:complexType name="EntityReferenceOfImportarClientevdVgx_P26">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ImportarCliente" Namespace="http://schemas.datacontract.org/2004/07/serTI.Campania.Modelo.BaseDatos" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfImportarClientevdVgx_P26" nillable="true" type="tns:EntityReferenceOfImportarClientevdVgx_P26" />
+  <xs:complexType name="EntityReferenceOfEmpresavdVgx_P26">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Empresa" Namespace="http://schemas.datacontract.org/2004/07/serTI.Campania.Modelo.BaseDatos" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfEmpresavdVgx_P26" nillable="true" type="tns:EntityReferenceOfEmpresavdVgx_P26" />
+  <xs:complexType name="EntityReferenceOfTipoCampaniavdVgx_P26">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="TipoCampania" Namespace="http://schemas.datacontract.org/2004/07/serTI.Campania.Modelo.BaseDatos" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfTipoCampaniavdVgx_P26" nillable="true" type="tns:EntityReferenceOfTipoCampaniavdVgx_P26" />
+  <xs:complexType name="EntityReferenceOfCampaniavdVgx_P26">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Campania" Namespace="http://schemas.datacontract.org/2004/07/serTI.Campania.Modelo.BaseDatos" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfCampaniavdVgx_P26" nillable="true" type="tns:EntityReferenceOfCampaniavdVgx_P26" />
+  <xs:complexType name="EntityReferenceOfPantallavdVgx_P26">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Pantalla" Namespace="http://schemas.datacontract.org/2004/07/serTI.Campania.Modelo.BaseDatos" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfPantallavdVgx_P26" nillable="true" type="tns:EntityReferenceOfPantallavdVgx_P26" />
+  <xs:complexType name="EntityReferenceOfPerfilvdVgx_P26">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Perfil" Namespace="http://schemas.datacontract.org/2004/07/serTI.Campania.Modelo.BaseDatos" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfPerfilvdVgx_P26" nillable="true" type="tns:EntityReferenceOfPerfilvdVgx_P26" />
+  <xs:complexType name="EntityReferenceOfUsuariovdVgx_P26">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Usuario" Namespace="http://schemas.datacontract.org/2004/07/serTI.Campania.Modelo.BaseDatos" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfUsuariovdVgx_P26" nillable="true" type="tns:EntityReferenceOfUsuariovdVgx_P26" />
+</xs:schema>

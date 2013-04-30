@@ -1,0 +1,172 @@
+/* Artfully masterminded by ZURB  */
+
+/* -----------------------------------------
+   Foundation
+----------------------------------------- */
+/* -----------------------------------------
+   Home
+----------------------------------------- */
+section.home{
+	background-image: url(../imgs/fondo_1.png);
+	height: 728px;
+}
+#fondo_2{
+	background-image: url(../imgs/img_index/fondo_2.png);
+	background-repeat: no-repeat;
+	width: 1160px;
+	height: 728px;
+	margin-left: -80px;
+}
+.top-bar{
+	background: rgba(0,0,0,0);
+	width: 1160px;
+	margin-left: -95px;
+}
+.logomK10{
+	background-image: url(../imgs/img_index/mk_logo.png);
+	width: 184px;
+	height: 64px;
+	float: left;
+}
+.botones_barra{
+	margin-top: 5px;
+	margin-left: 125px;
+}
+ul.btns_ li a{
+	float: left;
+	margin: 15px 0px 0 10px;
+}
+.btn_1{
+	background-image: url(../imgs/img_index/btn_1.png);
+	width: 72px;
+	height: 26px;
+	text-indent: -9999em;
+	float: left;
+}
+.btn_1:hover{
+	background-image: url(../imgs/img_index/btn_1_hover.png);
+	width: 72px;
+	height: 26px;
+	text-indent: -9999em;
+	float: left;
+}
+.boton_logout{
+	background-image: url(../imgs/img_index/btn_logout.png);
+	width: 84px;
+	height: 29px;
+	margin-top: 20px;
+	margin-left: 170px;
+	float: left;
+	text-indent: -9999em;
+}
+.cuadro_blanco{
+	background-color: rgba(255,255,255,0.89);
+	width: 840px;
+	height: 620px;
+	margin-left: -79px;
+	border-radius: 8px;
+}
+h3{
+	margin-left: 20px;
+}
+.panel{
+	background: #616161;
+	border-width: 0px;
+	margin-top: 5px;
+	margin-left: 33px;
+	width: 260px;
+	height: 88px;
+}
+.panel h5{
+	color:#ffffff; 
+	list-style: none;
+	margin-top: 15px;
+}
+.panel p{
+	color:#ffffff;
+	font-size: 14px;
+	float: left;
+}
+.panel_{
+	background: #616161;
+	border-width: 0px;
+	margin-top: 5px;
+	margin-left: 33px;
+	width: 260px;
+	height: 510px;
+}
+.panel_ h5{
+	color:#ffffff; 
+	list-style: none;
+	padding-top: 15px;
+	padding-left: 20px;
+}
+.panel_ p{
+	color:#ffffff;
+	font-size: 14px;
+	float: left;
+	padding-left: 20px;
+}
+.boton_perfil{
+	background-image: url(../imgs/img_index/icon_notificaciones.png);
+	background-repeat: no-repeat;
+	width: 27px;
+	height: 25px;
+	text-indent: -9999em;
+	margin-left: 170px;
+	margin-top: -18px;
+}
+
+.boton_calendario{
+	background-image: url(../imgs/img_index/icon_calendario.png);
+	width: 27px;
+	height: 25px;
+	margin-left: 190px;
+	margin-top: -16px;
+}
+.boton_audio{
+	background-image: url(../imgs/img_index/icon_audio.png);
+	width: 27px;
+	height: 25px;
+	margin-left: 190px;
+	margin-top: -16px;
+}
+.boton_doc{
+	background-image: url(../imgs/img_index/icon_doc.png);
+	width: 27px;
+	height: 25px;
+	margin-left: 190px;
+	margin-top: -16px;
+}
+.boton_imagen{
+	background-image: url(../imgs/img_index/icon_imagen.png);
+	width: 27px;
+	height: 25px;
+	margin-left: 190px;
+	margin-top: -16px;
+}
+hr{
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+}
+
+/* -----------------------------------------
+   CLASES DE AREA_TRABAJO
+----------------------------------------- */
+.cuadro_trabajo{
+	background-color: rgba(255,255,255,0.89);
+	width: 1126px;
+	height: 620px;
+	margin-left: -79px;
+	border-radius: 8px;
+}
+
+
+
+
+
+
+
+
+
+

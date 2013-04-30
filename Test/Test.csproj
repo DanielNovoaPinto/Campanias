@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F9A5214A-2B9E-428F-AA60-C31ABEEADE33}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Test</RootNamespace>
+    <AssemblyName>Test</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Campania.AccesoDatos\serTI.Campania.AccesoDatos.csproj">
+      <Project>{DE3C20A7-9ACA-4FAF-AE65-FCA3D9FAB7BB}</Project>
+      <Name>serTI.Campania.AccesoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Campania.Clientes.Diccionario\serTI.Campania.Clientes.Diccionario.csproj">
+      <Project>{69144F76-7E71-4BDC-BD7C-DCC1878ED54D}</Project>
+      <Name>serTI.Campania.Clientes.Diccionario</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Campania.Clientes.Herramientas\serTI.Campania.Clientes.Herramientas.csproj">
+      <Project>{EFF84C9A-33AC-44AD-BC4C-042FA864DC5B}</Project>
+      <Name>serTI.Campania.Clientes.Herramientas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Campania.Modelo\serTI.Campania.Modelo.csproj">
+      <Project>{8AA8B78E-81F4-4AC6-85C9-7C2AC429616C}</Project>
+      <Name>serTI.Campania.Modelo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Campania.Negocio\serTI.Campania.Negocio.csproj">
+      <Project>{0D93F6EF-5703-45D8-B47B-F43DB107E61B}</Project>
+      <Name>serTI.Campania.Negocio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Campania.Servicio\serTI.Campania.Servicio.csproj">
+      <Project>{7BD792B8-3FC2-4682-9A50-4B4332F621CB}</Project>
+      <Name>serTI.Campania.Servicio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Campania.Sistema.Diccionario\serTI.Campania.Sistema.Diccionario.csproj">
+      <Project>{4C5B6A3E-FA7D-4D16-BCC8-11ED7BED15B4}</Project>
+      <Name>serTI.Campania.Sistema.Diccionario</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Campania.Sistema.Herramientas\serTI.Campania.Sistema.Herramientas.csproj">
+      <Project>{F3DE909A-EA9D-4B08-9510-5846A196B1A3}</Project>
+      <Name>serTI.Campania.Sistema.Herramientas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Campania.Web\serTI.Campania.Web.csproj">
+      <Project>{547E2188-DC43-41F4-AE78-661E90CAA855}</Project>
+      <Name>serTI.Campania.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\serTI.Campania.Comunicacion.WCF\serTI.Campania.Comunicacion.WCF.csproj">
+      <Project>{4E40985B-433F-4A02-9E3A-E52A05BCCF3C}</Project>
+      <Name>serTI.Campania.Comunicacion.WCF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\serTI.Campania.General\serTI.Campania.General.csproj">
+      <Project>{9E032176-C6D2-405E-929E-561CF98217C8}</Project>
+      <Name>serTI.Campania.General</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

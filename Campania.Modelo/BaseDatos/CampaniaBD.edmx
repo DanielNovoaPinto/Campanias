@@ -1,0 +1,1713 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CampaniaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="CampaniaModelStoreContainer">
+          <EntitySet Name="Archivo" EntityType="CampaniaModel.Store.Archivo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Bitacora" EntityType="CampaniaModel.Store.Bitacora" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Campania" EntityType="CampaniaModel.Store.Campania" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Cita" EntityType="CampaniaModel.Store.Cita" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Contacto" EntityType="CampaniaModel.Store.Contacto" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Empresa" EntityType="CampaniaModel.Store.Empresa" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EmpresaContacto" EntityType="CampaniaModel.Store.EmpresaContacto" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ErrorImportarClienteTemporal" EntityType="CampaniaModel.Store.ErrorImportarClienteTemporal" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Excel" EntityType="CampaniaModel.Store.Excel" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="FuenteInformacion" EntityType="CampaniaModel.Store.FuenteInformacion" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ImportarCliente" EntityType="CampaniaModel.Store.ImportarCliente" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ImportarClienteContacto" EntityType="CampaniaModel.Store.ImportarClienteContacto" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ImportarClienteTemporal" EntityType="CampaniaModel.Store.ImportarClienteTemporal" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Monitoreo" EntityType="CampaniaModel.Store.Monitoreo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Nota" EntityType="CampaniaModel.Store.Nota" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Pantalla" EntityType="CampaniaModel.Store.Pantalla" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Perfil" EntityType="CampaniaModel.Store.Perfil" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PerfilPantalla" EntityType="CampaniaModel.Store.PerfilPantalla" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TipoCampania" EntityType="CampaniaModel.Store.TipoCampania" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Usuario" EntityType="CampaniaModel.Store.Usuario" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UsuarioCampania" EntityType="CampaniaModel.Store.UsuarioCampania" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Archivo_FuenteInformacion" Association="CampaniaModel.Store.FK_Archivo_FuenteInformacion">
+            <End Role="FuenteInformacion" EntitySet="FuenteInformacion" />
+            <End Role="Archivo" EntitySet="Archivo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Campania_Empresa" Association="CampaniaModel.Store.FK_Campania_Empresa">
+            <End Role="Empresa" EntitySet="Empresa" />
+            <End Role="Campania" EntitySet="Campania" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Campania_TipoCampania" Association="CampaniaModel.Store.FK_Campania_TipoCampania">
+            <End Role="TipoCampania" EntitySet="TipoCampania" />
+            <End Role="Campania" EntitySet="Campania" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cita_FuenteInformacion" Association="CampaniaModel.Store.FK_Cita_FuenteInformacion">
+            <End Role="FuenteInformacion" EntitySet="FuenteInformacion" />
+            <End Role="Cita" EntitySet="Cita" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmpresaContacto_Contacto" Association="CampaniaModel.Store.FK_EmpresaContacto_Contacto">
+            <End Role="Contacto" EntitySet="Contacto" />
+            <End Role="EmpresaContacto" EntitySet="EmpresaContacto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmpresaContacto_Empresa" Association="CampaniaModel.Store.FK_EmpresaContacto_Empresa">
+            <End Role="Empresa" EntitySet="Empresa" />
+            <End Role="EmpresaContacto" EntitySet="EmpresaContacto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Excel_Usuario" Association="CampaniaModel.Store.FK_Excel_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Excel" EntitySet="Excel" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FuenteInformacion_Campania" Association="CampaniaModel.Store.FK_FuenteInformacion_Campania">
+            <End Role="Campania" EntitySet="Campania" />
+            <End Role="FuenteInformacion" EntitySet="FuenteInformacion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FuenteInformacion_ImportarCliente" Association="CampaniaModel.Store.FK_FuenteInformacion_ImportarCliente">
+            <End Role="ImportarCliente" EntitySet="ImportarCliente" />
+            <End Role="FuenteInformacion" EntitySet="FuenteInformacion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ImportarCliente_Excel" Association="CampaniaModel.Store.FK_ImportarCliente_Excel">
+            <End Role="Excel" EntitySet="Excel" />
+            <End Role="ImportarCliente" EntitySet="ImportarCliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ImportarClienteContacto_Contacto" Association="CampaniaModel.Store.FK_ImportarClienteContacto_Contacto">
+            <End Role="Contacto" EntitySet="Contacto" />
+            <End Role="ImportarClienteContacto" EntitySet="ImportarClienteContacto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ImportarClienteContacto_ImportarCliente" Association="CampaniaModel.Store.FK_ImportarClienteContacto_ImportarCliente">
+            <End Role="ImportarCliente" EntitySet="ImportarCliente" />
+            <End Role="ImportarClienteContacto" EntitySet="ImportarClienteContacto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Nota_FuenteInformacion" Association="CampaniaModel.Store.FK_Nota_FuenteInformacion">
+            <End Role="FuenteInformacion" EntitySet="FuenteInformacion" />
+            <End Role="Nota" EntitySet="Nota" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PerfilPantalla_Pantalla" Association="CampaniaModel.Store.FK_PerfilPantalla_Pantalla">
+            <End Role="Pantalla" EntitySet="Pantalla" />
+            <End Role="PerfilPantalla" EntitySet="PerfilPantalla" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PerfilPantalla_Perfil" Association="CampaniaModel.Store.FK_PerfilPantalla_Perfil">
+            <End Role="Perfil" EntitySet="Perfil" />
+            <End Role="PerfilPantalla" EntitySet="PerfilPantalla" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuario_Perfil" Association="CampaniaModel.Store.FK_Usuario_Perfil">
+            <End Role="Perfil" EntitySet="Perfil" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioCampania_Campania" Association="CampaniaModel.Store.FK_UsuarioCampania_Campania">
+            <End Role="Campania" EntitySet="Campania" />
+            <End Role="UsuarioCampania" EntitySet="UsuarioCampania" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioCampania_Usuario" Association="CampaniaModel.Store.FK_UsuarioCampania_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="UsuarioCampania" EntitySet="UsuarioCampania" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Archivo">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Name="Clave" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="Archivo" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="ClaveFuenteInformacion" Type="bigint" Nullable="false" />
+          <Property Name="Estatus" Type="bit" Nullable="false" />
+          <Property Name="UsuarioActualizacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaActualizacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Bitacora">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Name="Clave" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ClaveUsuario" Type="int" Nullable="false" />
+          <Property Name="Fecha" Type="datetime" Nullable="false" />
+          <Property Name="Objeto" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Accion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="UsuarioCreacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Campania">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Name="Clave" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="ClaveTipoCampania" Type="int" Nullable="false" />
+          <Property Name="ClaveEmpresa" Type="bigint" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="500" />
+          <Property Name="FechaInicio" Type="date" Nullable="false" />
+          <Property Name="FechaFin" Type="date" Nullable="false" />
+          <Property Name="Estatus" Type="bit" Nullable="false" />
+          <Property Name="UsuarioActualizacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaActualizacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cita">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Name="Clave" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Lugar" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="FechaHora" Type="datetime" Nullable="false" />
+          <Property Name="ClaveFuenteInformacion" Type="bigint" Nullable="false" />
+          <Property Name="Estatus" Type="bit" Nullable="false" />
+          <Property Name="UsuarioActualizacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaActualizacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Contacto">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Name="Clave" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="40" />
+          <Property Name="ApellidoPaterno" Type="varchar" Nullable="false" MaxLength="40" />
+          <Property Name="ApellidoMaterno" Type="varchar" MaxLength="40" />
+          <Property Name="TelefonoCelular" Type="varchar" MaxLength="20" />
+          <Property Name="Fax" Type="varchar" MaxLength="20" />
+          <Property Name="Extension" Type="varchar" MaxLength="20" />
+          <Property Name="Estatus" Type="bit" Nullable="false" />
+          <Property Name="UsuarioActualizacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaActualizacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Empresa">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Name="Clave" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Direccion" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="Contacto" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Email" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Telefono" Type="int" Nullable="false" />
+          <Property Name="FechaHora" Type="datetime" Nullable="false" />
+          <Property Name="Estatus" Type="bit" Nullable="false" />
+          <Property Name="UsuarioActualizacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaActualizacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EmpresaContacto">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Name="Clave" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ClaveEmpresa" Type="bigint" Nullable="false" />
+          <Property Name="ClaveContacto" Type="int" Nullable="false" />
+          <Property Name="Estatus" Type="bit" Nullable="false" />
+          <Property Name="UsuarioActualizacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaActualizacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ErrorImportarClienteTemporal">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Name="Clave" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="varchar" MaxLength="100" />
+          <Property Name="Direccion" Type="varchar" MaxLength="500" />
+          <Property Name="Contacto" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="Telefono" Type="varchar" MaxLength="50" />
+          <Property Name="FechaHora" Type="varchar" MaxLength="50" />
+          <Property Name="ErrorColumn" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="IdConsulta" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Excel">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Name="Clave" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="70" />
+          <Property Name="Ruta" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="ClaveUsuarioActualizacion" Type="int" Nullable="false" />
+          <Property Name="FechaHora" Type="datetime" Nullable="false" />
+          <Property Name="Estatus" Type="bit" Nullable="false" />
+          <Property Name="UsuarioActualizacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaActualizacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FuenteInformacion">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Name="Clave" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ClaveCampania" Type="int" Nullable="false" />
+          <Property Name="ClaveImportarCliente" Type="bigint" Nullable="false" />
+          <Property Name="Estatus" Type="bit" Nullable="false" />
+          <Property Name="UsuarioActualizacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaActualizacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ImportarCliente">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Name="Clave" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Direccion" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="Contacto" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Email" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Telefono" Type="int" Nullable="false" />
+          <Property Name="FechaHora" Type="datetime" Nullable="false" />
+          <Property Name="ClaveExcel" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ImportarClienteContacto">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Name="Clave" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ClaveImportarCliente" Type="bigint" Nullable="false" />
+          <Property Name="ClaveContacto" Type="int" Nullable="false" />
+          <Property Name="Estatus" Type="bit" Nullable="false" />
+          <Property Name="UsuarioActualizacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaActualizacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ImportarClienteTemporal">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Name="Clave" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Direccion" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="Contacto" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Email" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Telefono" Type="int" Nullable="false" />
+          <Property Name="FechaHora" Type="datetime" Nullable="false" />
+          <Property Name="IdConsulta" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Monitoreo">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Name="Clave" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Modulo" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="Mensaje" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="Detalle" Type="varchar(max)" Nullable="false" />
+          <Property Name="Estatus" Type="bit" Nullable="false" />
+          <Property Name="UsuarioActualizacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaActualizacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Nota">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Name="Clave" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="500" />
+          <Property Name="ClaveFuenteInformacion" Type="bigint" Nullable="false" />
+          <Property Name="Estatus" Type="bit" Nullable="false" />
+          <Property Name="UsuarioActualizacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaActualizacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Pantalla">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Name="Clave" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="URL" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="Estatus" Type="bit" Nullable="false" />
+          <Property Name="UsuarioActualizacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaActualizacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Perfil">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Name="Clave" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Estatus" Type="bit" Nullable="false" />
+          <Property Name="UsuarioActualizacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaActualizacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PerfilPantalla">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Name="Clave" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ClavePerfil" Type="int" Nullable="false" />
+          <Property Name="ClavePantalla" Type="int" Nullable="false" />
+          <Property Name="Visible" Type="bit" Nullable="false" />
+          <Property Name="Estatus" Type="bit" Nullable="false" />
+          <Property Name="UsuarioActualizacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaActualizacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TipoCampania">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Name="Clave" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TipoCampania" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Estatus" Type="bit" Nullable="false" />
+          <Property Name="UsuarioActualizacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaActualizacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Name="Clave" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="ApellidoPaterno" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="ApellidoMaterno" Type="varchar" MaxLength="100" />
+          <Property Name="Usuario" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Contrasenia" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="ClavePerfil" Type="int" Nullable="false" />
+          <Property Name="Estatus" Type="bit" Nullable="false" />
+          <Property Name="UsuarioActualizacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaActualizacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UsuarioCampania">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Name="Clave" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ClaveCampania" Type="int" Nullable="false" />
+          <Property Name="ClaveUsuario" Type="int" Nullable="false" />
+          <Property Name="Estatus" Type="bit" Nullable="false" />
+          <Property Name="UsuarioActualizacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaActualizacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Archivo_FuenteInformacion">
+          <End Role="FuenteInformacion" Type="CampaniaModel.Store.FuenteInformacion" Multiplicity="1" />
+          <End Role="Archivo" Type="CampaniaModel.Store.Archivo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FuenteInformacion">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="Archivo">
+              <PropertyRef Name="ClaveFuenteInformacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Campania_Empresa">
+          <End Role="Empresa" Type="CampaniaModel.Store.Empresa" Multiplicity="1" />
+          <End Role="Campania" Type="CampaniaModel.Store.Campania" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empresa">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="Campania">
+              <PropertyRef Name="ClaveEmpresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Campania_TipoCampania">
+          <End Role="TipoCampania" Type="CampaniaModel.Store.TipoCampania" Multiplicity="1" />
+          <End Role="Campania" Type="CampaniaModel.Store.Campania" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoCampania">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="Campania">
+              <PropertyRef Name="ClaveTipoCampania" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cita_FuenteInformacion">
+          <End Role="FuenteInformacion" Type="CampaniaModel.Store.FuenteInformacion" Multiplicity="1" />
+          <End Role="Cita" Type="CampaniaModel.Store.Cita" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FuenteInformacion">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="Cita">
+              <PropertyRef Name="ClaveFuenteInformacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmpresaContacto_Contacto">
+          <End Role="Contacto" Type="CampaniaModel.Store.Contacto" Multiplicity="1" />
+          <End Role="EmpresaContacto" Type="CampaniaModel.Store.EmpresaContacto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contacto">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="EmpresaContacto">
+              <PropertyRef Name="ClaveContacto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmpresaContacto_Empresa">
+          <End Role="Empresa" Type="CampaniaModel.Store.Empresa" Multiplicity="1" />
+          <End Role="EmpresaContacto" Type="CampaniaModel.Store.EmpresaContacto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empresa">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="EmpresaContacto">
+              <PropertyRef Name="ClaveEmpresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Excel_Usuario">
+          <End Role="Usuario" Type="CampaniaModel.Store.Usuario" Multiplicity="1" />
+          <End Role="Excel" Type="CampaniaModel.Store.Excel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="Excel">
+              <PropertyRef Name="ClaveUsuarioActualizacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FuenteInformacion_Campania">
+          <End Role="Campania" Type="CampaniaModel.Store.Campania" Multiplicity="1" />
+          <End Role="FuenteInformacion" Type="CampaniaModel.Store.FuenteInformacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Campania">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="FuenteInformacion">
+              <PropertyRef Name="ClaveCampania" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FuenteInformacion_ImportarCliente">
+          <End Role="ImportarCliente" Type="CampaniaModel.Store.ImportarCliente" Multiplicity="1" />
+          <End Role="FuenteInformacion" Type="CampaniaModel.Store.FuenteInformacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ImportarCliente">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="FuenteInformacion">
+              <PropertyRef Name="ClaveImportarCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ImportarCliente_Excel">
+          <End Role="Excel" Type="CampaniaModel.Store.Excel" Multiplicity="1" />
+          <End Role="ImportarCliente" Type="CampaniaModel.Store.ImportarCliente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Excel">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="ImportarCliente">
+              <PropertyRef Name="ClaveExcel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ImportarClienteContacto_Contacto">
+          <End Role="Contacto" Type="CampaniaModel.Store.Contacto" Multiplicity="1" />
+          <End Role="ImportarClienteContacto" Type="CampaniaModel.Store.ImportarClienteContacto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contacto">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="ImportarClienteContacto">
+              <PropertyRef Name="ClaveContacto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ImportarClienteContacto_ImportarCliente">
+          <End Role="ImportarCliente" Type="CampaniaModel.Store.ImportarCliente" Multiplicity="1" />
+          <End Role="ImportarClienteContacto" Type="CampaniaModel.Store.ImportarClienteContacto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ImportarCliente">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="ImportarClienteContacto">
+              <PropertyRef Name="ClaveImportarCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Nota_FuenteInformacion">
+          <End Role="FuenteInformacion" Type="CampaniaModel.Store.FuenteInformacion" Multiplicity="1" />
+          <End Role="Nota" Type="CampaniaModel.Store.Nota" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FuenteInformacion">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="Nota">
+              <PropertyRef Name="ClaveFuenteInformacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PerfilPantalla_Pantalla">
+          <End Role="Pantalla" Type="CampaniaModel.Store.Pantalla" Multiplicity="1" />
+          <End Role="PerfilPantalla" Type="CampaniaModel.Store.PerfilPantalla" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pantalla">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="PerfilPantalla">
+              <PropertyRef Name="ClavePantalla" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PerfilPantalla_Perfil">
+          <End Role="Perfil" Type="CampaniaModel.Store.Perfil" Multiplicity="1" />
+          <End Role="PerfilPantalla" Type="CampaniaModel.Store.PerfilPantalla" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Perfil">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="PerfilPantalla">
+              <PropertyRef Name="ClavePerfil" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuario_Perfil">
+          <End Role="Perfil" Type="CampaniaModel.Store.Perfil" Multiplicity="1" />
+          <End Role="Usuario" Type="CampaniaModel.Store.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Perfil">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="ClavePerfil" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioCampania_Campania">
+          <End Role="Campania" Type="CampaniaModel.Store.Campania" Multiplicity="1" />
+          <End Role="UsuarioCampania" Type="CampaniaModel.Store.UsuarioCampania" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Campania">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="UsuarioCampania">
+              <PropertyRef Name="ClaveCampania" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioCampania_Usuario">
+          <End Role="Usuario" Type="CampaniaModel.Store.Usuario" Multiplicity="1" />
+          <End Role="UsuarioCampania" Type="CampaniaModel.Store.UsuarioCampania" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="UsuarioCampania">
+              <PropertyRef Name="ClaveUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CampaniaModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="CampaniaEntidades" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Perfil" EntityType="CampaniaModel.Perfil" />
+          <EntitySet Name="Usuario" EntityType="CampaniaModel.Usuario" />
+          <AssociationSet Name="FK_Usuario_Perfil" Association="CampaniaModel.FK_Usuario_Perfil">
+            <End Role="Perfil" EntitySet="Perfil" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <EntitySet Name="Archivo" EntityType="CampaniaModel.Archivo" />
+          <EntitySet Name="Bitacora" EntityType="CampaniaModel.Bitacora" />
+          <EntitySet Name="Campania" EntityType="CampaniaModel.Campania" />
+          <EntitySet Name="Cita" EntityType="CampaniaModel.Cita" />
+          <EntitySet Name="Contacto" EntityType="CampaniaModel.Contacto" />
+          <EntitySet Name="Empresa" EntityType="CampaniaModel.Empresa" />
+          <EntitySet Name="EmpresaContacto" EntityType="CampaniaModel.EmpresaContacto" />
+          <EntitySet Name="ErrorImportarClienteTemporal" EntityType="CampaniaModel.ErrorImportarClienteTemporal" />
+          <EntitySet Name="Excel" EntityType="CampaniaModel.Excel" />
+          <EntitySet Name="FuenteInformacion" EntityType="CampaniaModel.FuenteInformacion" />
+          <EntitySet Name="ImportarCliente" EntityType="CampaniaModel.ImportarCliente" />
+          <EntitySet Name="ImportarClienteContacto" EntityType="CampaniaModel.ImportarClienteContacto" />
+          <EntitySet Name="ImportarClienteTemporal" EntityType="CampaniaModel.ImportarClienteTemporal" />
+          <EntitySet Name="Monitoreo" EntityType="CampaniaModel.Monitoreo" />
+          <EntitySet Name="Nota" EntityType="CampaniaModel.Nota" />
+          <EntitySet Name="Pantalla" EntityType="CampaniaModel.Pantalla" />
+          <EntitySet Name="PerfilPantalla" EntityType="CampaniaModel.PerfilPantalla" />
+          <EntitySet Name="TipoCampania" EntityType="CampaniaModel.TipoCampania" />
+          <EntitySet Name="UsuarioCampania" EntityType="CampaniaModel.UsuarioCampania" />
+          <AssociationSet Name="FK_Archivo_FuenteInformacion" Association="CampaniaModel.FK_Archivo_FuenteInformacion">
+            <End Role="FuenteInformacion" EntitySet="FuenteInformacion" />
+            <End Role="Archivo" EntitySet="Archivo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Campania_Empresa" Association="CampaniaModel.FK_Campania_Empresa">
+            <End Role="Empresa" EntitySet="Empresa" />
+            <End Role="Campania" EntitySet="Campania" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Campania_TipoCampania" Association="CampaniaModel.FK_Campania_TipoCampania">
+            <End Role="TipoCampania" EntitySet="TipoCampania" />
+            <End Role="Campania" EntitySet="Campania" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FuenteInformacion_Campania" Association="CampaniaModel.FK_FuenteInformacion_Campania">
+            <End Role="Campania" EntitySet="Campania" />
+            <End Role="FuenteInformacion" EntitySet="FuenteInformacion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioCampania_Campania" Association="CampaniaModel.FK_UsuarioCampania_Campania">
+            <End Role="Campania" EntitySet="Campania" />
+            <End Role="UsuarioCampania" EntitySet="UsuarioCampania" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cita_FuenteInformacion" Association="CampaniaModel.FK_Cita_FuenteInformacion">
+            <End Role="FuenteInformacion" EntitySet="FuenteInformacion" />
+            <End Role="Cita" EntitySet="Cita" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmpresaContacto_Contacto" Association="CampaniaModel.FK_EmpresaContacto_Contacto">
+            <End Role="Contacto" EntitySet="Contacto" />
+            <End Role="EmpresaContacto" EntitySet="EmpresaContacto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ImportarClienteContacto_Contacto" Association="CampaniaModel.FK_ImportarClienteContacto_Contacto">
+            <End Role="Contacto" EntitySet="Contacto" />
+            <End Role="ImportarClienteContacto" EntitySet="ImportarClienteContacto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmpresaContacto_Empresa" Association="CampaniaModel.FK_EmpresaContacto_Empresa">
+            <End Role="Empresa" EntitySet="Empresa" />
+            <End Role="EmpresaContacto" EntitySet="EmpresaContacto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Excel_Usuario" Association="CampaniaModel.FK_Excel_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Excel" EntitySet="Excel" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ImportarCliente_Excel" Association="CampaniaModel.FK_ImportarCliente_Excel">
+            <End Role="Excel" EntitySet="Excel" />
+            <End Role="ImportarCliente" EntitySet="ImportarCliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FuenteInformacion_ImportarCliente" Association="CampaniaModel.FK_FuenteInformacion_ImportarCliente">
+            <End Role="ImportarCliente" EntitySet="ImportarCliente" />
+            <End Role="FuenteInformacion" EntitySet="FuenteInformacion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Nota_FuenteInformacion" Association="CampaniaModel.FK_Nota_FuenteInformacion">
+            <End Role="FuenteInformacion" EntitySet="FuenteInformacion" />
+            <End Role="Nota" EntitySet="Nota" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ImportarClienteContacto_ImportarCliente" Association="CampaniaModel.FK_ImportarClienteContacto_ImportarCliente">
+            <End Role="ImportarCliente" EntitySet="ImportarCliente" />
+            <End Role="ImportarClienteContacto" EntitySet="ImportarClienteContacto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PerfilPantalla_Pantalla" Association="CampaniaModel.FK_PerfilPantalla_Pantalla">
+            <End Role="Pantalla" EntitySet="Pantalla" />
+            <End Role="PerfilPantalla" EntitySet="PerfilPantalla" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PerfilPantalla_Perfil" Association="CampaniaModel.FK_PerfilPantalla_Perfil">
+            <End Role="Perfil" EntitySet="Perfil" />
+            <End Role="PerfilPantalla" EntitySet="PerfilPantalla" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioCampania_Usuario" Association="CampaniaModel.FK_UsuarioCampania_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="UsuarioCampania" EntitySet="UsuarioCampania" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Perfil">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Name="Clave" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Estatus" Type="Boolean" Nullable="false" />
+          <Property Name="UsuarioActualizacion" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="FechaActualizacion" Type="DateTime" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Name="Clave" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="ApellidoPaterno" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="ApellidoMaterno" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Usuario1" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Contrasenia" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="ClavePerfil" Type="Int32" Nullable="false" />
+          <Property Name="Estatus" Type="Boolean" Nullable="false" />
+          <Property Name="UsuarioActualizacion" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="FechaActualizacion" Type="DateTime" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Usuario_Perfil">
+          <End Role="Perfil" Type="CampaniaModel.Perfil" Multiplicity="1" />
+          <End Role="Usuario" Type="CampaniaModel.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Perfil">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="ClavePerfil" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Archivo">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Type="Int64" Name="Clave" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Archivo1" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="Int64" Name="ClaveFuenteInformacion" Nullable="false" />
+          <Property Type="Boolean" Name="Estatus" Nullable="false" />
+          <Property Type="String" Name="UsuarioActualizacion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaActualizacion" Nullable="false" />
+          <Property Type="String" Name="UsuarioCreacion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaCreacion" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Bitacora">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Type="Int32" Name="Clave" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="ClaveUsuario" Nullable="false" />
+          <Property Type="DateTime" Name="Fecha" Nullable="false" />
+          <Property Type="String" Name="Objeto" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Accion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UsuarioCreacion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaCreacion" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Campania">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Type="Int32" Name="Clave" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ClaveTipoCampania" Nullable="false" />
+          <Property Type="Int64" Name="ClaveEmpresa" Nullable="false" />
+          <Property Type="String" Name="Descripcion" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaInicio" Nullable="false" />
+          <Property Type="DateTime" Name="FechaFin" Nullable="false" />
+          <Property Type="Boolean" Name="Estatus" Nullable="false" />
+          <Property Type="String" Name="UsuarioActualizacion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaActualizacion" Nullable="false" />
+          <Property Type="String" Name="UsuarioCreacion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaCreacion" Nullable="false" />
+          <NavigationProperty Name="Empresa" Relationship="CampaniaModel.FK_Campania_Empresa" FromRole="Campania" ToRole="Empresa" />
+          <NavigationProperty Name="TipoCampania" Relationship="CampaniaModel.FK_Campania_TipoCampania" FromRole="Campania" ToRole="TipoCampania" />
+          <NavigationProperty Name="FuenteInformacion" Relationship="CampaniaModel.FK_FuenteInformacion_Campania" FromRole="Campania" ToRole="FuenteInformacion" />
+          <NavigationProperty Name="UsuarioCampania" Relationship="CampaniaModel.FK_UsuarioCampania_Campania" FromRole="Campania" ToRole="UsuarioCampania" />
+        </EntityType>
+        <EntityType Name="Cita">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Type="Int64" Name="Clave" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Lugar" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaHora" Nullable="false" />
+          <Property Type="Int64" Name="ClaveFuenteInformacion" Nullable="false" />
+          <Property Type="Boolean" Name="Estatus" Nullable="false" />
+          <Property Type="String" Name="UsuarioActualizacion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaActualizacion" Nullable="false" />
+          <Property Type="String" Name="UsuarioCreacion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaCreacion" Nullable="false" />
+          <NavigationProperty Name="FuenteInformacion" Relationship="CampaniaModel.FK_Cita_FuenteInformacion" FromRole="Cita" ToRole="FuenteInformacion" />
+        </EntityType>
+        <EntityType Name="Contacto">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Type="Int32" Name="Clave" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ApellidoPaterno" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ApellidoMaterno" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TelefonoCelular" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Fax" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Extension" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Estatus" Nullable="false" />
+          <Property Type="String" Name="UsuarioActualizacion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaActualizacion" Nullable="false" />
+          <Property Type="String" Name="UsuarioCreacion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaCreacion" Nullable="false" />
+          <NavigationProperty Name="EmpresaContacto" Relationship="CampaniaModel.FK_EmpresaContacto_Contacto" FromRole="Contacto" ToRole="EmpresaContacto" />
+          <NavigationProperty Name="ImportarClienteContacto" Relationship="CampaniaModel.FK_ImportarClienteContacto_Contacto" FromRole="Contacto" ToRole="ImportarClienteContacto" />
+        </EntityType>
+        <EntityType Name="Empresa">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Type="Int64" Name="Clave" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Direccion" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Contacto" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Telefono" Nullable="false" />
+          <Property Type="DateTime" Name="FechaHora" Nullable="false" />
+          <Property Type="Boolean" Name="Estatus" Nullable="false" />
+          <Property Type="String" Name="UsuarioActualizacion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaActualizacion" Nullable="false" />
+          <Property Type="String" Name="UsuarioCreacion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaCreacion" Nullable="false" />
+          <NavigationProperty Name="Campania" Relationship="CampaniaModel.FK_Campania_Empresa" FromRole="Empresa" ToRole="Campania" />
+          <NavigationProperty Name="EmpresaContacto" Relationship="CampaniaModel.FK_EmpresaContacto_Empresa" FromRole="Empresa" ToRole="EmpresaContacto" />
+        </EntityType>
+        <EntityType Name="EmpresaContacto">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Type="Int64" Name="Clave" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="ClaveEmpresa" Nullable="false" />
+          <Property Type="Int32" Name="ClaveContacto" Nullable="false" />
+          <Property Type="Boolean" Name="Estatus" Nullable="false" />
+          <Property Type="String" Name="UsuarioActualizacion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaActualizacion" Nullable="false" />
+          <Property Type="String" Name="UsuarioCreacion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaCreacion" Nullable="false" />
+          <NavigationProperty Name="Contacto" Relationship="CampaniaModel.FK_EmpresaContacto_Contacto" FromRole="EmpresaContacto" ToRole="Contacto" />
+          <NavigationProperty Name="Empresa" Relationship="CampaniaModel.FK_EmpresaContacto_Empresa" FromRole="EmpresaContacto" ToRole="Empresa" />
+        </EntityType>
+        <EntityType Name="ErrorImportarClienteTemporal">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Type="Int32" Name="Clave" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nombre" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Direccion" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Contacto" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Email" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Telefono" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FechaHora" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ErrorColumn" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IdConsulta" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Excel">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Type="Int32" Name="Clave" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Ruta" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ClaveUsuarioActualizacion" Nullable="false" />
+          <Property Type="DateTime" Name="FechaHora" Nullable="false" />
+          <Property Type="Boolean" Name="Estatus" Nullable="false" />
+          <Property Type="String" Name="UsuarioActualizacion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaActualizacion" Nullable="false" />
+          <Property Type="String" Name="UsuarioCreacion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaCreacion" Nullable="false" />
+          <NavigationProperty Name="Usuario" Relationship="CampaniaModel.FK_Excel_Usuario" FromRole="Excel" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="FuenteInformacion">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Type="Int64" Name="Clave" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="ClaveCampania" Nullable="false" />
+          <Property Type="Int64" Name="ClaveImportarCliente" Nullable="false" />
+          <Property Type="Boolean" Name="Estatus" Nullable="false" />
+          <Property Type="String" Name="UsuarioActualizacion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaActualizacion" Nullable="false" />
+          <Property Type="String" Name="UsuarioCreacion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaCreacion" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ImportarCliente">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Type="Int64" Name="Clave" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Direccion" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Contacto" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Telefono" Nullable="false" />
+          <Property Type="DateTime" Name="FechaHora" Nullable="false" />
+          <Property Type="Int32" Name="ClaveExcel" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ImportarClienteContacto">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Type="Int64" Name="Clave" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="ClaveImportarCliente" Nullable="false" />
+          <Property Type="Int32" Name="ClaveContacto" Nullable="false" />
+          <Property Type="Boolean" Name="Estatus" Nullable="false" />
+          <Property Type="String" Name="UsuarioActualizacion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaActualizacion" Nullable="false" />
+          <Property Type="String" Name="UsuarioCreacion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaCreacion" Nullable="false" />
+          <NavigationProperty Name="Contacto" Relationship="CampaniaModel.FK_ImportarClienteContacto_Contacto" FromRole="ImportarClienteContacto" ToRole="Contacto" />
+          <NavigationProperty Name="ImportarCliente" Relationship="CampaniaModel.FK_ImportarClienteContacto_ImportarCliente" FromRole="ImportarClienteContacto" ToRole="ImportarCliente" />
+        </EntityType>
+        <EntityType Name="ImportarClienteTemporal">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Type="Int32" Name="Clave" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Direccion" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Contacto" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Telefono" Nullable="false" />
+          <Property Type="DateTime" Name="FechaHora" Nullable="false" />
+          <Property Type="Int32" Name="IdConsulta" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Monitoreo">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Type="Int32" Name="Clave" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Modulo" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Mensaje" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Detalle" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Estatus" Nullable="false" />
+          <Property Type="String" Name="UsuarioActualizacion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaActualizacion" Nullable="false" />
+          <Property Type="String" Name="UsuarioCreacion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaCreacion" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Nota">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Type="Int64" Name="Clave" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Descripcion" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="Int64" Name="ClaveFuenteInformacion" Nullable="false" />
+          <Property Type="Boolean" Name="Estatus" Nullable="false" />
+          <Property Type="String" Name="UsuarioActualizacion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaActualizacion" Nullable="false" />
+          <Property Type="String" Name="UsuarioCreacion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaCreacion" Nullable="false" />
+          <NavigationProperty Name="FuenteInformacion" Relationship="CampaniaModel.FK_Nota_FuenteInformacion" FromRole="Nota" ToRole="FuenteInformacion" />
+        </EntityType>
+        <EntityType Name="Pantalla">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Type="Int32" Name="Clave" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="URL" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Estatus" Nullable="false" />
+          <Property Type="String" Name="UsuarioActualizacion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaActualizacion" Nullable="false" />
+          <Property Type="String" Name="UsuarioCreacion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaCreacion" Nullable="false" />
+          <NavigationProperty Name="PerfilPantalla" Relationship="CampaniaModel.FK_PerfilPantalla_Pantalla" FromRole="Pantalla" ToRole="PerfilPantalla" />
+        </EntityType>
+        <EntityType Name="PerfilPantalla">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Type="Int64" Name="Clave" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="ClavePerfil" Nullable="false" />
+          <Property Type="Int32" Name="ClavePantalla" Nullable="false" />
+          <Property Type="Boolean" Name="Visible" Nullable="false" />
+          <Property Type="Boolean" Name="Estatus" Nullable="false" />
+          <Property Type="String" Name="UsuarioActualizacion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaActualizacion" Nullable="false" />
+          <Property Type="String" Name="UsuarioCreacion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaCreacion" Nullable="false" />
+          <NavigationProperty Name="Pantalla" Relationship="CampaniaModel.FK_PerfilPantalla_Pantalla" FromRole="PerfilPantalla" ToRole="Pantalla" />
+          <NavigationProperty Name="Perfil" Relationship="CampaniaModel.FK_PerfilPantalla_Perfil" FromRole="PerfilPantalla" ToRole="Perfil" />
+        </EntityType>
+        <EntityType Name="TipoCampania">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Type="Int32" Name="Clave" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="TipoCampania1" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Estatus" Nullable="false" />
+          <Property Type="String" Name="UsuarioActualizacion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaActualizacion" Nullable="false" />
+          <Property Type="String" Name="UsuarioCreacion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaCreacion" Nullable="false" />
+          <NavigationProperty Name="Campania" Relationship="CampaniaModel.FK_Campania_TipoCampania" FromRole="TipoCampania" ToRole="Campania" />
+        </EntityType>
+        <EntityType Name="UsuarioCampania">
+          <Key>
+            <PropertyRef Name="Clave" />
+          </Key>
+          <Property Type="Int32" Name="Clave" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="ClaveCampania" Nullable="false" />
+          <Property Type="Int32" Name="ClaveUsuario" Nullable="false" />
+          <Property Type="Boolean" Name="Estatus" Nullable="false" />
+          <Property Type="String" Name="UsuarioActualizacion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaActualizacion" Nullable="false" />
+          <Property Type="String" Name="UsuarioCreacion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaCreacion" Nullable="false" />
+          <NavigationProperty Name="Campania" Relationship="CampaniaModel.FK_UsuarioCampania_Campania" FromRole="UsuarioCampania" ToRole="Campania" />
+          <NavigationProperty Name="Usuario" Relationship="CampaniaModel.FK_UsuarioCampania_Usuario" FromRole="UsuarioCampania" ToRole="Usuario" />
+        </EntityType>
+        <Association Name="FK_Archivo_FuenteInformacion">
+          <End Type="CampaniaModel.FuenteInformacion" Role="FuenteInformacion" Multiplicity="1" />
+          <End Type="CampaniaModel.Archivo" Role="Archivo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FuenteInformacion">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="Archivo">
+              <PropertyRef Name="ClaveFuenteInformacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Campania_Empresa">
+          <End Type="CampaniaModel.Empresa" Role="Empresa" Multiplicity="1" />
+          <End Type="CampaniaModel.Campania" Role="Campania" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empresa">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="Campania">
+              <PropertyRef Name="ClaveEmpresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Campania_TipoCampania">
+          <End Type="CampaniaModel.TipoCampania" Role="TipoCampania" Multiplicity="1" />
+          <End Type="CampaniaModel.Campania" Role="Campania" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoCampania">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="Campania">
+              <PropertyRef Name="ClaveTipoCampania" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FuenteInformacion_Campania">
+          <End Type="CampaniaModel.Campania" Role="Campania" Multiplicity="1" />
+          <End Type="CampaniaModel.FuenteInformacion" Role="FuenteInformacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Campania">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="FuenteInformacion">
+              <PropertyRef Name="ClaveCampania" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioCampania_Campania">
+          <End Type="CampaniaModel.Campania" Role="Campania" Multiplicity="1" />
+          <End Type="CampaniaModel.UsuarioCampania" Role="UsuarioCampania" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Campania">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="UsuarioCampania">
+              <PropertyRef Name="ClaveCampania" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cita_FuenteInformacion">
+          <End Type="CampaniaModel.FuenteInformacion" Role="FuenteInformacion" Multiplicity="1" />
+          <End Type="CampaniaModel.Cita" Role="Cita" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FuenteInformacion">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="Cita">
+              <PropertyRef Name="ClaveFuenteInformacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmpresaContacto_Contacto">
+          <End Type="CampaniaModel.Contacto" Role="Contacto" Multiplicity="1" />
+          <End Type="CampaniaModel.EmpresaContacto" Role="EmpresaContacto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contacto">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="EmpresaContacto">
+              <PropertyRef Name="ClaveContacto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ImportarClienteContacto_Contacto">
+          <End Type="CampaniaModel.Contacto" Role="Contacto" Multiplicity="1" />
+          <End Type="CampaniaModel.ImportarClienteContacto" Role="ImportarClienteContacto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contacto">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="ImportarClienteContacto">
+              <PropertyRef Name="ClaveContacto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmpresaContacto_Empresa">
+          <End Type="CampaniaModel.Empresa" Role="Empresa" Multiplicity="1" />
+          <End Type="CampaniaModel.EmpresaContacto" Role="EmpresaContacto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empresa">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="EmpresaContacto">
+              <PropertyRef Name="ClaveEmpresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Excel_Usuario">
+          <End Type="CampaniaModel.Usuario" Role="Usuario" Multiplicity="1" />
+          <End Type="CampaniaModel.Excel" Role="Excel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="Excel">
+              <PropertyRef Name="ClaveUsuarioActualizacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ImportarCliente_Excel">
+          <End Type="CampaniaModel.Excel" Role="Excel" Multiplicity="1" />
+          <End Type="CampaniaModel.ImportarCliente" Role="ImportarCliente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Excel">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="ImportarCliente">
+              <PropertyRef Name="ClaveExcel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FuenteInformacion_ImportarCliente">
+          <End Type="CampaniaModel.ImportarCliente" Role="ImportarCliente" Multiplicity="1" />
+          <End Type="CampaniaModel.FuenteInformacion" Role="FuenteInformacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ImportarCliente">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="FuenteInformacion">
+              <PropertyRef Name="ClaveImportarCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Nota_FuenteInformacion">
+          <End Type="CampaniaModel.FuenteInformacion" Role="FuenteInformacion" Multiplicity="1" />
+          <End Type="CampaniaModel.Nota" Role="Nota" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FuenteInformacion">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="Nota">
+              <PropertyRef Name="ClaveFuenteInformacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ImportarClienteContacto_ImportarCliente">
+          <End Type="CampaniaModel.ImportarCliente" Role="ImportarCliente" Multiplicity="1" />
+          <End Type="CampaniaModel.ImportarClienteContacto" Role="ImportarClienteContacto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ImportarCliente">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="ImportarClienteContacto">
+              <PropertyRef Name="ClaveImportarCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PerfilPantalla_Pantalla">
+          <End Type="CampaniaModel.Pantalla" Role="Pantalla" Multiplicity="1" />
+          <End Type="CampaniaModel.PerfilPantalla" Role="PerfilPantalla" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pantalla">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="PerfilPantalla">
+              <PropertyRef Name="ClavePantalla" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PerfilPantalla_Perfil">
+          <End Type="CampaniaModel.Perfil" Role="Perfil" Multiplicity="1" />
+          <End Type="CampaniaModel.PerfilPantalla" Role="PerfilPantalla" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Perfil">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="PerfilPantalla">
+              <PropertyRef Name="ClavePerfil" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioCampania_Usuario">
+          <End Type="CampaniaModel.Usuario" Role="Usuario" Multiplicity="1" />
+          <End Type="CampaniaModel.UsuarioCampania" Role="UsuarioCampania" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="Clave" />
+            </Principal>
+            <Dependent Role="UsuarioCampania">
+              <PropertyRef Name="ClaveUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CampaniaModelStoreContainer" CdmEntityContainer="CampaniaEntidades">
+          <EntitySetMapping Name="Perfil"><EntityTypeMapping TypeName="CampaniaModel.Perfil"><MappingFragment StoreEntitySet="Perfil">
+            <ScalarProperty Name="Clave" ColumnName="Clave" />
+            <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+            <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+            <ScalarProperty Name="UsuarioActualizacion" ColumnName="UsuarioActualizacion" />
+            <ScalarProperty Name="FechaActualizacion" ColumnName="FechaActualizacion" />
+            <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+            <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Usuario"><EntityTypeMapping TypeName="CampaniaModel.Usuario"><MappingFragment StoreEntitySet="Usuario">
+            <ScalarProperty Name="Clave" ColumnName="Clave" />
+            <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+            <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+            <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+            <ScalarProperty Name="Usuario1" ColumnName="Usuario" />
+            <ScalarProperty Name="Contrasenia" ColumnName="Contrasenia" />
+            <ScalarProperty Name="ClavePerfil" ColumnName="ClavePerfil" />
+            <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+            <ScalarProperty Name="UsuarioActualizacion" ColumnName="UsuarioActualizacion" />
+            <ScalarProperty Name="FechaActualizacion" ColumnName="FechaActualizacion" />
+            <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+            <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Archivo">
+            <EntityTypeMapping TypeName="CampaniaModel.Archivo">
+              <MappingFragment StoreEntitySet="Archivo">
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="FechaActualizacion" ColumnName="FechaActualizacion" />
+                <ScalarProperty Name="UsuarioActualizacion" ColumnName="UsuarioActualizacion" />
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="ClaveFuenteInformacion" ColumnName="ClaveFuenteInformacion" />
+                <ScalarProperty Name="Archivo1" ColumnName="Archivo" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Clave" ColumnName="Clave" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Bitacora">
+            <EntityTypeMapping TypeName="CampaniaModel.Bitacora">
+              <MappingFragment StoreEntitySet="Bitacora">
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="Accion" ColumnName="Accion" />
+                <ScalarProperty Name="Objeto" ColumnName="Objeto" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="ClaveUsuario" ColumnName="ClaveUsuario" />
+                <ScalarProperty Name="Clave" ColumnName="Clave" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Campania">
+            <EntityTypeMapping TypeName="CampaniaModel.Campania">
+              <MappingFragment StoreEntitySet="Campania">
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="FechaActualizacion" ColumnName="FechaActualizacion" />
+                <ScalarProperty Name="UsuarioActualizacion" ColumnName="UsuarioActualizacion" />
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="ClaveEmpresa" ColumnName="ClaveEmpresa" />
+                <ScalarProperty Name="ClaveTipoCampania" ColumnName="ClaveTipoCampania" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Clave" ColumnName="Clave" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cita">
+            <EntityTypeMapping TypeName="CampaniaModel.Cita">
+              <MappingFragment StoreEntitySet="Cita">
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="FechaActualizacion" ColumnName="FechaActualizacion" />
+                <ScalarProperty Name="UsuarioActualizacion" ColumnName="UsuarioActualizacion" />
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="ClaveFuenteInformacion" ColumnName="ClaveFuenteInformacion" />
+                <ScalarProperty Name="FechaHora" ColumnName="FechaHora" />
+                <ScalarProperty Name="Lugar" ColumnName="Lugar" />
+                <ScalarProperty Name="Clave" ColumnName="Clave" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contacto">
+            <EntityTypeMapping TypeName="CampaniaModel.Contacto">
+              <MappingFragment StoreEntitySet="Contacto">
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="FechaActualizacion" ColumnName="FechaActualizacion" />
+                <ScalarProperty Name="UsuarioActualizacion" ColumnName="UsuarioActualizacion" />
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="Extension" ColumnName="Extension" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="TelefonoCelular" ColumnName="TelefonoCelular" />
+                <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+                <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Clave" ColumnName="Clave" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Empresa">
+            <EntityTypeMapping TypeName="CampaniaModel.Empresa">
+              <MappingFragment StoreEntitySet="Empresa">
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="FechaActualizacion" ColumnName="FechaActualizacion" />
+                <ScalarProperty Name="UsuarioActualizacion" ColumnName="UsuarioActualizacion" />
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="FechaHora" ColumnName="FechaHora" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Contacto" ColumnName="Contacto" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Clave" ColumnName="Clave" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmpresaContacto">
+            <EntityTypeMapping TypeName="CampaniaModel.EmpresaContacto">
+              <MappingFragment StoreEntitySet="EmpresaContacto">
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="FechaActualizacion" ColumnName="FechaActualizacion" />
+                <ScalarProperty Name="UsuarioActualizacion" ColumnName="UsuarioActualizacion" />
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="ClaveContacto" ColumnName="ClaveContacto" />
+                <ScalarProperty Name="ClaveEmpresa" ColumnName="ClaveEmpresa" />
+                <ScalarProperty Name="Clave" ColumnName="Clave" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ErrorImportarClienteTemporal">
+            <EntityTypeMapping TypeName="CampaniaModel.ErrorImportarClienteTemporal">
+              <MappingFragment StoreEntitySet="ErrorImportarClienteTemporal">
+                <ScalarProperty Name="IdConsulta" ColumnName="IdConsulta" />
+                <ScalarProperty Name="ErrorColumn" ColumnName="ErrorColumn" />
+                <ScalarProperty Name="FechaHora" ColumnName="FechaHora" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Contacto" ColumnName="Contacto" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Clave" ColumnName="Clave" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Excel">
+            <EntityTypeMapping TypeName="CampaniaModel.Excel">
+              <MappingFragment StoreEntitySet="Excel">
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="FechaActualizacion" ColumnName="FechaActualizacion" />
+                <ScalarProperty Name="UsuarioActualizacion" ColumnName="UsuarioActualizacion" />
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="FechaHora" ColumnName="FechaHora" />
+                <ScalarProperty Name="ClaveUsuarioActualizacion" ColumnName="ClaveUsuarioActualizacion" />
+                <ScalarProperty Name="Ruta" ColumnName="Ruta" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Clave" ColumnName="Clave" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FuenteInformacion">
+            <EntityTypeMapping TypeName="CampaniaModel.FuenteInformacion">
+              <MappingFragment StoreEntitySet="FuenteInformacion">
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="FechaActualizacion" ColumnName="FechaActualizacion" />
+                <ScalarProperty Name="UsuarioActualizacion" ColumnName="UsuarioActualizacion" />
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="ClaveImportarCliente" ColumnName="ClaveImportarCliente" />
+                <ScalarProperty Name="ClaveCampania" ColumnName="ClaveCampania" />
+                <ScalarProperty Name="Clave" ColumnName="Clave" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ImportarCliente">
+            <EntityTypeMapping TypeName="CampaniaModel.ImportarCliente">
+              <MappingFragment StoreEntitySet="ImportarCliente">
+                <ScalarProperty Name="ClaveExcel" ColumnName="ClaveExcel" />
+                <ScalarProperty Name="FechaHora" ColumnName="FechaHora" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Contacto" ColumnName="Contacto" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Clave" ColumnName="Clave" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ImportarClienteContacto">
+            <EntityTypeMapping TypeName="CampaniaModel.ImportarClienteContacto">
+              <MappingFragment StoreEntitySet="ImportarClienteContacto">
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="FechaActualizacion" ColumnName="FechaActualizacion" />
+                <ScalarProperty Name="UsuarioActualizacion" ColumnName="UsuarioActualizacion" />
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="ClaveContacto" ColumnName="ClaveContacto" />
+                <ScalarProperty Name="ClaveImportarCliente" ColumnName="ClaveImportarCliente" />
+                <ScalarProperty Name="Clave" ColumnName="Clave" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ImportarClienteTemporal">
+            <EntityTypeMapping TypeName="CampaniaModel.ImportarClienteTemporal">
+              <MappingFragment StoreEntitySet="ImportarClienteTemporal">
+                <ScalarProperty Name="IdConsulta" ColumnName="IdConsulta" />
+                <ScalarProperty Name="FechaHora" ColumnName="FechaHora" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Contacto" ColumnName="Contacto" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Clave" ColumnName="Clave" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Monitoreo">
+            <EntityTypeMapping TypeName="CampaniaModel.Monitoreo">
+              <MappingFragment StoreEntitySet="Monitoreo">
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="FechaActualizacion" ColumnName="FechaActualizacion" />
+                <ScalarProperty Name="UsuarioActualizacion" ColumnName="UsuarioActualizacion" />
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="Detalle" ColumnName="Detalle" />
+                <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+                <ScalarProperty Name="Modulo" ColumnName="Modulo" />
+                <ScalarProperty Name="Clave" ColumnName="Clave" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Nota">
+            <EntityTypeMapping TypeName="CampaniaModel.Nota">
+              <MappingFragment StoreEntitySet="Nota">
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="FechaActualizacion" ColumnName="FechaActualizacion" />
+                <ScalarProperty Name="UsuarioActualizacion" ColumnName="UsuarioActualizacion" />
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="ClaveFuenteInformacion" ColumnName="ClaveFuenteInformacion" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Clave" ColumnName="Clave" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pantalla">
+            <EntityTypeMapping TypeName="CampaniaModel.Pantalla">
+              <MappingFragment StoreEntitySet="Pantalla">
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="FechaActualizacion" ColumnName="FechaActualizacion" />
+                <ScalarProperty Name="UsuarioActualizacion" ColumnName="UsuarioActualizacion" />
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="URL" ColumnName="URL" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Clave" ColumnName="Clave" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PerfilPantalla">
+            <EntityTypeMapping TypeName="CampaniaModel.PerfilPantalla">
+              <MappingFragment StoreEntitySet="PerfilPantalla">
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="FechaActualizacion" ColumnName="FechaActualizacion" />
+                <ScalarProperty Name="UsuarioActualizacion" ColumnName="UsuarioActualizacion" />
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="Visible" ColumnName="Visible" />
+                <ScalarProperty Name="ClavePantalla" ColumnName="ClavePantalla" />
+                <ScalarProperty Name="ClavePerfil" ColumnName="ClavePerfil" />
+                <ScalarProperty Name="Clave" ColumnName="Clave" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoCampania">
+            <EntityTypeMapping TypeName="CampaniaModel.TipoCampania">
+              <MappingFragment StoreEntitySet="TipoCampania">
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="FechaActualizacion" ColumnName="FechaActualizacion" />
+                <ScalarProperty Name="UsuarioActualizacion" ColumnName="UsuarioActualizacion" />
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="TipoCampania1" ColumnName="TipoCampania" />
+                <ScalarProperty Name="Clave" ColumnName="Clave" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsuarioCampania">
+            <EntityTypeMapping TypeName="CampaniaModel.UsuarioCampania">
+              <MappingFragment StoreEntitySet="UsuarioCampania">
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="FechaActualizacion" ColumnName="FechaActualizacion" />
+                <ScalarProperty Name="UsuarioActualizacion" ColumnName="UsuarioActualizacion" />
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="ClaveUsuario" ColumnName="ClaveUsuario" />
+                <ScalarProperty Name="ClaveCampania" ColumnName="ClaveCampania" />
+                <ScalarProperty Name="Clave" ColumnName="Clave" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="CampaniaBD">
+        <EntityTypeShape EntityType="CampaniaModel.Perfil" Width="1.5" PointX="0.5" PointY="1.375" Height="2.3648893229166665" IsExpanded="true" />
+        <EntityTypeShape EntityType="CampaniaModel.Usuario" Width="1.5" PointX="2.5" PointY="0.875" Height="3.3263964843749996" IsExpanded="true" />
+        <AssociationConnector Association="CampaniaModel.FK_Usuario_Perfil" ManuallyRouted="false">
+          <ConnectorPoint PointX="2" PointY="2.5574446614583333" />
+          <ConnectorPoint PointX="2.0729166666666665" PointY="2.5574446614583328" />
+          <ConnectorPoint PointX="2.2395833333333335" PointY="2.5574446614583333" />
+          <ConnectorPoint PointX="2.5" PointY="2.5574446614583333" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="CampaniaModel.Archivo" Width="1.5" PointX="12" PointY="11.125" Height="2.7494921874999996" />
+        <EntityTypeShape EntityType="CampaniaModel.Bitacora" Width="1.5" PointX="3.375" PointY="10.25" Height="2.3648893229166656" />
+        <EntityTypeShape EntityType="CampaniaModel.Campania" Width="1.5" PointX="3" PointY="16.125" Height="4.0956022135416674" />
+        <EntityTypeShape EntityType="CampaniaModel.Cita" Width="1.5" PointX="12" PointY="14.75" Height="2.9417936197916674" />
+        <EntityTypeShape EntityType="CampaniaModel.Contacto" Width="1.5" PointX="10.5" PointY="22.5" Height="3.7109993489583317" />
+        <EntityTypeShape EntityType="CampaniaModel.Empresa" Width="1.5" PointX="0.75" PointY="14.625" Height="3.7109993489583335" />
+        <EntityTypeShape EntityType="CampaniaModel.EmpresaContacto" Width="1.5" PointX="14.75" PointY="19" Height="2.9417936197916674" />
+        <EntityTypeShape EntityType="CampaniaModel.ErrorImportarClienteTemporal" Width="1.5" PointX="5.375" PointY="10.25" Height="2.7494921875000031" />
+        <EntityTypeShape EntityType="CampaniaModel.Excel" Width="1.5" PointX="5.25" PointY="5.75" Height="3.1340950520833317" />
+        <EntityTypeShape EntityType="CampaniaModel.FuenteInformacion" Width="1.5" PointX="9.75" PointY="5.625" Height="2.5771907552083331" />
+        <EntityTypeShape EntityType="CampaniaModel.ImportarCliente" Width="1.5" PointX="7.5" PointY="5.875" Height="2.5571907552083335" />
+        <EntityTypeShape EntityType="CampaniaModel.ImportarClienteContacto" Width="1.5" PointX="12.75" PointY="5.875" Height="2.9417936197916674" />
+        <EntityTypeShape EntityType="CampaniaModel.ImportarClienteTemporal" Width="1.5" PointX="7.375" PointY="10.25" Height="2.5571907552083388" />
+        <EntityTypeShape EntityType="CampaniaModel.Monitoreo" Width="1.5" PointX="9.375" PointY="10.25" Height="2.7494921875000031" />
+        <EntityTypeShape EntityType="CampaniaModel.Nota" Width="1.5" PointX="12" PointY="18.5" Height="2.7494921875000031" />
+        <EntityTypeShape EntityType="CampaniaModel.Pantalla" Width="1.5" PointX="0.75" PointY="10.5" Height="2.7494921875000031" />
+        <EntityTypeShape EntityType="CampaniaModel.PerfilPantalla" Width="1.5" PointX="4.375" PointY="0.5" Height="3.1340950520833388" />
+        <EntityTypeShape EntityType="CampaniaModel.TipoCampania" Width="1.5" PointX="0.75" PointY="19.125" Height="2.5571907552083388" />
+        <EntityTypeShape EntityType="CampaniaModel.UsuarioCampania" Width="1.5" PointX="8" PointY="1.25" Height="2.9417936197916674" />
+        <AssociationConnector Association="CampaniaModel.FK_Archivo_FuenteInformacion" >
+          <ConnectorPoint PointX="11.09375" PointY="8.1821907552083335" />
+          <ConnectorPoint PointX="11.09375" PointY="13.468242187500001" />
+          <ConnectorPoint PointX="11.119794166666667" PointY="13.468242187500001" />
+          <ConnectorPoint PointX="11.286460833333335" PointY="13.468242187500001" />
+          <ConnectorPoint PointX="11.541666666666666" PointY="13.468242187500001" />
+          <ConnectorPoint PointX="11.708333333333334" PointY="13.468242187500001" />
+          <ConnectorPoint PointX="12" PointY="13.468242187500001" />
+        </AssociationConnector>
+        <AssociationConnector Association="CampaniaModel.FK_Campania_Empresa" >
+          <ConnectorPoint PointX="2.25" PointY="17.230499674479166" />
+          <ConnectorPoint PointX="3" PointY="17.230499674479166" />
+        </AssociationConnector>
+        <AssociationConnector Association="CampaniaModel.FK_Campania_TipoCampania" >
+          <ConnectorPoint PointX="2.25" PointY="19.672801106770834" />
+          <ConnectorPoint PointX="3" PointY="19.672801106770834" />
+        </AssociationConnector>
+        <AssociationConnector Association="CampaniaModel.FK_FuenteInformacion_Campania" >
+          <ConnectorPoint PointX="3.15625" PointY="16.125" />
+          <ConnectorPoint PointX="3.15625" PointY="5.65625" />
+          <ConnectorPoint PointX="3.4947916666666665" PointY="5.6562499999999991" />
+          <ConnectorPoint PointX="3.6614583333333335" PointY="5.65625" />
+          <ConnectorPoint PointX="9.1041666666666661" PointY="5.6562499999999991" />
+          <ConnectorPoint PointX="9.2708333333333339" PointY="5.65625" />
+          <ConnectorPoint PointX="9.75" PointY="5.65625" />
+        </AssociationConnector>
+        <AssociationConnector Association="CampaniaModel.FK_UsuarioCampania_Campania" >
+          <ConnectorPoint PointX="4.5" PointY="18.172801106770834" />
+          <ConnectorPoint PointX="9.1875" PointY="18.172801106770834" />
+          <ConnectorPoint PointX="9.1875" PointY="4.1917936197916674" />
+        </AssociationConnector>
+        <AssociationConnector Association="CampaniaModel.FK_Cita_FuenteInformacion" >
+          <ConnectorPoint PointX="11.2031275" PointY="8.1821907552083335" />
+          <ConnectorPoint PointX="11.2031275" PointY="16.220896809895834" />
+          <ConnectorPoint PointX="11.541666666666666" PointY="16.220896809895834" />
+          <ConnectorPoint PointX="11.708333333333334" PointY="16.220896809895834" />
+          <ConnectorPoint PointX="12" PointY="16.220896809895834" />
+        </AssociationConnector>
+        <AssociationConnector Association="CampaniaModel.FK_EmpresaContacto_Contacto" >
+          <ConnectorPoint PointX="12" PointY="24.355499674479166" />
+          <ConnectorPoint PointX="15.5" PointY="24.355499674479166" />
+          <ConnectorPoint PointX="15.5" PointY="21.941793619791667" />
+        </AssociationConnector>
+        <AssociationConnector Association="CampaniaModel.FK_ImportarClienteContacto_Contacto" >
+          <ConnectorPoint PointX="11.625" PointY="22.5" />
+          <ConnectorPoint PointX="11.625" PointY="8.608869687499995" />
+          <ConnectorPoint PointX="12.75" PointY="8.608869687499995" />
+        </AssociationConnector>
+        <AssociationConnector Association="CampaniaModel.FK_EmpresaContacto_Empresa" >
+          <ConnectorPoint PointX="2.25" PointY="14.65625" />
+          <ConnectorPoint PointX="3.0729166666666665" PointY="14.65625" />
+          <ConnectorPoint PointX="3.2395833333333335" PointY="14.65625" />
+          <ConnectorPoint PointX="9.1041666666666661" PointY="14.65625" />
+          <ConnectorPoint PointX="9.2708333333333339" PointY="14.65625" />
+          <ConnectorPoint PointX="10.901039166666665" PointY="14.65625" />
+          <ConnectorPoint PointX="11.067705833333333" PointY="14.65625" />
+          <ConnectorPoint PointX="11.119794166666667" PointY="14.65625" />
+          <ConnectorPoint PointX="11.286460833333335" PointY="14.65625" />
+          <ConnectorPoint PointX="11.541666666666666" PointY="14.65625" />
+          <ConnectorPoint PointX="11.708333333333334" PointY="14.65625" />
+          <ConnectorPoint PointX="15.5" PointY="14.65625" />
+          <ConnectorPoint PointX="15.5" PointY="19" />
+        </AssociationConnector>
+        <AssociationConnector Association="CampaniaModel.FK_Excel_Usuario" >
+          <ConnectorPoint PointX="3.578125" PointY="4.201396484375" />
+          <ConnectorPoint PointX="3.578125" PointY="7.3170475260416659" />
+          <ConnectorPoint PointX="5.25" PointY="7.3170475260416659" />
+        </AssociationConnector>
+        <AssociationConnector Association="CampaniaModel.FK_ImportarCliente_Excel" >
+          <ConnectorPoint PointX="6.75" PointY="7.1535953776041667" />
+          <ConnectorPoint PointX="7.5" PointY="7.1535953776041667" />
+        </AssociationConnector>
+        <AssociationConnector Association="CampaniaModel.FK_FuenteInformacion_ImportarCliente" >
+          <ConnectorPoint PointX="9" PointY="7.0285953776041667" />
+          <ConnectorPoint PointX="9.1041666666666661" PointY="7.0285953776041659" />
+          <ConnectorPoint PointX="9.2708333333333339" PointY="7.0285953776041667" />
+          <ConnectorPoint PointX="9.75" PointY="7.0285953776041667" />
+        </AssociationConnector>
+        <AssociationConnector Association="CampaniaModel.FK_Nota_FuenteInformacion" >
+          <ConnectorPoint PointX="10.9843725" PointY="8.1821907552083335" />
+          <ConnectorPoint PointX="10.9843725" PointY="19.87474609375" />
+          <ConnectorPoint PointX="11.541666666666666" PointY="19.87474609375" />
+          <ConnectorPoint PointX="11.708333333333334" PointY="19.87474609375" />
+          <ConnectorPoint PointX="12" PointY="19.87474609375" />
+        </AssociationConnector>
+        <AssociationConnector Association="CampaniaModel.FK_ImportarClienteContacto_ImportarCliente" >
+          <ConnectorPoint PointX="9" PointY="8.3384407552083353" />
+          <ConnectorPoint PointX="9.1041666666666661" PointY="8.3384407552083353" />
+          <ConnectorPoint PointX="9.2708333333333339" PointY="8.3384407552083353" />
+          <ConnectorPoint PointX="10.901039166666665" PointY="8.3384407552083335" />
+          <ConnectorPoint PointX="11.286460833333335" PointY="8.3384407552083353" />
+          <ConnectorPoint PointX="12.75" PointY="8.3384407552083353" />
+        </AssociationConnector>
+        <AssociationConnector Association="CampaniaModel.FK_PerfilPantalla_Pantalla" >
+          <ConnectorPoint PointX="2.15625" PointY="10.5" />
+          <ConnectorPoint PointX="2.15625" PointY="0.65625" />
+          <ConnectorPoint PointX="4.375" PointY="0.65625" />
+        </AssociationConnector>
+        <AssociationConnector Association="CampaniaModel.FK_PerfilPantalla_Perfil" >
+          <ConnectorPoint PointX="1.25" PointY="1.375" />
+          <ConnectorPoint PointX="1.25" PointY="0.76562749999999369" />
+          <ConnectorPoint PointX="2.0729166666666665" PointY="0.76562749999999313" />
+          <ConnectorPoint PointX="2.2395833333333335" PointY="0.76562749999999369" />
+          <ConnectorPoint PointX="4.375" PointY="0.76562749999999369" />
+        </AssociationConnector>
+        <AssociationConnector Association="CampaniaModel.FK_UsuarioCampania_Usuario" >
+          <ConnectorPoint PointX="4" PointY="3.9441943359375031" />
+          <ConnectorPoint PointX="8" PointY="3.9441943359375031" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

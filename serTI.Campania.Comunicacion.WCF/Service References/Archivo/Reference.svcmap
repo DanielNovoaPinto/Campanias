@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ae689007-71c5-4ce6-a679-d42b6d3b2c35" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:6060/Administracion/Archivo.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Archivo.xsd" MetadataType="Schema" ID="5b61b415-f2af-474b-81f7-410bfcb36d9b" SourceId="1" SourceUrl="http://localhost:6060/Administracion/Archivo.svc?xsd=xsd2" />
+    <MetadataFile FileName="Archivo.wsdl" MetadataType="Wsdl" ID="39c026ca-b467-409f-a006-02fa4320a87b" SourceId="1" SourceUrl="http://localhost:6060/Administracion/Archivo.svc?wsdl" />
+    <MetadataFile FileName="Archivo.disco" MetadataType="Disco" ID="c6b9cc41-6de5-454d-bb51-d39db3662856" SourceId="1" SourceUrl="http://localhost:6060/Administracion/Archivo.svc?disco" />
+    <MetadataFile FileName="Archivo1.xsd" MetadataType="Schema" ID="0bcc9d23-e995-420b-9409-e4152090f678" SourceId="1" SourceUrl="http://localhost:6060/Administracion/Archivo.svc?xsd=xsd3" />
+    <MetadataFile FileName="Archivo2.xsd" MetadataType="Schema" ID="04e019e3-296d-47a0-9f94-e324019e0814" SourceId="1" SourceUrl="http://localhost:6060/Administracion/Archivo.svc?xsd=xsd0" />
+    <MetadataFile FileName="Archivo3.xsd" MetadataType="Schema" ID="283e3b3e-68c1-49bc-9843-01e9ceba90c7" SourceId="1" SourceUrl="http://localhost:6060/Administracion/Archivo.svc?xsd=xsd1" />
+    <MetadataFile FileName="Archivo4.xsd" MetadataType="Schema" ID="970eeea5-28ae-4d05-b682-f143f8854ba4" SourceId="1" SourceUrl="http://localhost:6060/Administracion/Archivo.svc?xsd=xsd4" />
+    <MetadataFile FileName="Archivo5.xsd" MetadataType="Schema" ID="05946a89-a2dd-4b03-b8a3-dba5abe0bff2" SourceId="1" SourceUrl="http://localhost:6060/Administracion/Archivo.svc?xsd=xsd5" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
